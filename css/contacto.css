@@ -1,0 +1,147 @@
+/*Cuerpo de pagina */  
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Brygada 1918', serif;
+    background: url(../img/fondo.jpg) no-repeat center center fixed;
+    background-size: cover;  
+}
+
+
+
+/*Menu nav y logo*/
+
+
+
+
+#navMenu{
+    width: 100%;
+    display: grid;
+    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
+    grid-template-columns: 100px 20% 20% 20% 20%;
+    grid-template-rows: 100px;
+    grid-template-areas: "Logo Acerca Redes Compras Contacto";
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    position: fixed;
+    text-align: center;
+}
+li:hover{
+    transform: scale(1.5,1.5);
+}
+.logo{
+    grid-area: Logo;
+    animation-name: logo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes logo{
+  from {
+    transform: rotateY(0deg)
+  }
+  to{
+    transform: rotateY(360deg)
+  }
+}
+.optUno{
+    grid-area: Acerca;
+    width: 100%;
+}
+.optDos{
+    grid-area: Redes;
+    width: 100%;
+}
+.optTres{
+    grid-area: Compras;
+    width: 100%;
+}
+.optCuatro{
+    grid-area: Contacto;
+    width: 100%;
+}
+img{
+    width: 100%;
+}
+#aM{
+    text-decoration: none;
+    font-size: 20px;
+    font-style: italic;
+    color: white;
+}
+/*Tamaño de letra Titulo de Formulario*/
+#tituloFormulario{
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline;
+}
+/*Recuadro formulario*/
+fieldset{
+    background-color: rgba(245, 255, 250, 0.521);
+    margin-top: 200px;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 28%;
+}
+
+/*Recuadros vacios*/
+input{
+    background-color: darkgray;
+}
+/*Recuadro descripcion*/
+textarea{
+    background-color: darkgray;
+}
+/*color de fondo botones de ejecucion*/
+select{
+    background-color: darkgray;
+}
+/*color de fondo boton index*/
+button{
+    background-color: darkgray;
+}
+label{
+    font-style: italic;
+    font-size: 20px;
+}
+/*Pie de Pagina*/
+
+
+
+footer{  
+    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
+    width: 100%;
+}
+#barraFooter{
+    display: grid;
+    grid-template-areas: "yo fa in tw derechos";   
+    grid-template-columns: 50px 50px 50px 50px 600px;
+    grid-template-rows: 50px;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-decoration: underline white;
+}
+.derechos{
+    font-size: 15px;
+    grid-area: derechos;
+}
+.iN{
+    grid-area: in;
+}
+.yT{
+    grid-area: yo;
+}
+.fB{
+    grid-area: fa;
+}
+.tC{
+    grid-area: tw;
+}

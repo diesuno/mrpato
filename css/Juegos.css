@@ -1,0 +1,368 @@
+/*Cuerpo de pagina */  
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Brygada 1918', serif;
+    background: url(../img/fondo.jpg) no-repeat center center fixed;
+    background-size: cover;  
+}
+
+
+
+/*Menu nav y logo*/
+
+
+
+
+#navMenu{
+    width: 100%;
+    display: grid;
+    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
+    grid-template-columns: 100px 20% 20% 20% 20%;
+    grid-template-rows: 100px;
+    grid-template-areas: "Logo Acerca Redes Compras Contacto";
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    position: fixed;
+    text-align: center;
+}
+li:hover{
+    transform: scale(1.5,1.5);
+}
+.logo{
+    grid-area: Logo;
+    animation-name: logo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes logo{
+  from {
+    transform: rotateY(0deg)
+  }
+  to{
+    transform: rotateY(360deg)
+  }
+}
+.optUno{
+    grid-area: Acerca;
+    width: 100%;
+}
+.optDos{
+    grid-area: Redes;
+    width: 100%;
+}
+.optTres{
+    grid-area: Compras;
+    width: 100%;
+}
+.optCuatro{
+    grid-area: Contacto;
+    width: 100%;
+}
+img{
+    width: 100%;
+}
+#aM{
+    text-decoration: none;
+    font-size: 20px;
+    font-style: italic;
+    color: white;
+}
+
+
+
+/*Grilla de imagenes*/
+
+
+#grilla{
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 700px 800px 500px;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+
+
+
+/*seccion 1*/
+
+
+
+
+.sec1{
+    height: 450px;
+    width: 1500px;
+    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
+    display: grid;
+    grid-template-columns: 400px 150px 400px ;
+    grid-template-rows: 50px 50px 250px ;
+    grid-template-areas:  "b1 sT1 b2" 
+                          "b3 b4 b5"
+                          "wZ b6 rE";
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-content: space-evenly;   
+}
+.sT1{
+    
+    grid-area: sT1;
+    text-align: center;
+    
+    font-size: 30px;
+    color: white;
+    text-decoration: underline white;  
+}
+.wZ{
+    grid-area: wZ;
+}
+.wZ:hover{
+    transform: scale(1.5,1.5);
+    transition: 2s;
+}
+.rE{
+    grid-area: rE;  
+}
+.rE:hover{
+    transform: scale(1.5,1.5);
+    transition: 2s;
+}
+.b1{
+    grid-area: b1;
+}
+.b2{
+    grid-area: b2;
+}
+.b3{  
+    grid-area: b3;
+    color: white;
+    text-decoration: underline white;
+    font-size: 25px;
+    justify-self: center;
+}
+.b4{
+    grid-area: b4;
+}
+.b5{
+    grid-area: b5;
+    color: white;
+    text-decoration: underline white;
+    font-size: 25px;
+    justify-self: center; 
+}
+.b6{
+    grid-area: b6;
+}
+
+
+
+/*seccion 2*/
+
+
+
+
+.sec2{
+    width: 1500px;
+    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 150px 50px 300px 50px 300px;
+    grid-template-areas:  "c1 sT2 c2" 
+                          "c3 c4 c5"
+                          "dO sC wC"
+                          "c6 c7 c8"
+                          "aOE b9 hR";
+    row-gap: 10px;
+    column-gap: 10px; 
+    justify-content: center;
+    align-content: center;  
+}
+.sT2{
+    grid-area: sT2;
+    text-align: center;
+    color: white;
+    text-decoration: underline white;
+    font-size: 30px;
+      
+}
+.dO{
+    grid-area: dO; 
+}
+.dO:hover{
+    transform: scale(1.5,1.5);
+    transition: 2s;
+}
+.sC{
+    grid-area: sC; 
+}
+.sC:hover{
+    transform: scale(1.5,1.5);
+    transition: 2s;
+}
+.wC{
+    grid-area: wC; 
+}
+.wC:hover{
+    transform: scale(1.5,1.5);
+    transition: 2s;
+}
+.aOE{
+    grid-area: aOE; 
+}
+.aOE:hover{
+    transform: scale(1.5,1.5);
+    transition: 2s;
+}
+.hR{
+    grid-area: hR; 
+}
+.hR:hover{
+    transform: scale(1.5,1.5);
+    transition: 2s;
+}
+.c1{
+    grid-area: c1; 
+}
+.c2{
+    grid-area: c2; 
+}
+.c3{
+    grid-area: c3;
+    color: white;
+    text-decoration: underline white;
+    font-size: 25px;
+    justify-self: center;
+}
+.c4{
+    grid-area: c4;
+    color: white;
+    text-decoration: underline white;
+    font-size: 25px;;
+    justify-self: center; 
+}
+.c5{
+    grid-area: c5;
+    color: white;
+    text-decoration: underline white;
+    font-size: 25px;
+    justify-self: center; 
+}
+.c6{
+    grid-area: c6;
+    color: white;
+    text-decoration: underline white;
+    font-size: 25px;
+    justify-self: center;
+}
+.c7{
+    grid-area: c7; 
+}
+.c8{
+    grid-area: c8;
+    color: white;
+    text-decoration: underline white;
+    font-size: 25px;
+    justify-self: center; 
+}
+.c9{
+    grid-area: c9; 
+}
+
+
+
+/*Pie de Pagina*/
+
+
+
+footer{  
+    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
+    width: 100%;
+}
+#barraFooter{
+    display: grid;
+    grid-template-areas: "yo fa in tw derechos";   
+    grid-template-columns: 50px 50px 50px 50px 600px;
+    grid-template-rows: 50px;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-decoration: underline white;
+}
+.derechos{
+    font-size: 15px;
+    grid-area: derechos;
+}
+.iN{
+    grid-area: in;
+}
+.yT{
+    grid-area: yo;
+}
+.fB{
+    grid-area: fa;
+}
+.tC{
+    grid-area: tw;
+}
+
+
+
+
+
+/*Ajustes de margenes Dispositivos "telefonos"*/
+
+
+
+@media only screen and (max-width: 600px){
+#aM{
+    font-size: 13px;
+}
+.sec1{
+    height: 500px;
+    justify-content: center;
+    align-items:center;
+    width: 50%;
+    grid-template-columns: 60%;
+    grid-template-rows:  50px 50px 150px 50px 150px;
+    grid-template-areas:  "sT1" 
+                          "b3"
+                          "wZ"
+                          "b5"
+                          "rE";
+}
+.sT1{
+    font-size: 15px;
+}
+.b3{
+    font-size: 10px;
+}
+.b5{
+    font-size: 10px;
+}
+.sec2{
+    display:none
+}
+#barraFooter{
+    display: grid;
+    grid-template-areas: "yo fa in tw derechos";   
+    grid-template-columns: 25px 25px 25px 25px 150px;
+    grid-template-rows: 50px;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-decoration: underline white;
+}
+.derechos{
+    font-size: 9px;
+}
+}
