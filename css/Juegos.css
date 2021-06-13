@@ -7,7 +7,7 @@
     padding: 0;
 }
 body{
-    font-family: 'Brygada 1918', serif;
+    font-family: 'Roboto', sans-serif;
     background: url(../img/fondo.jpg) no-repeat center center fixed;
     background-size: cover;  
 }
