@@ -21,6 +21,7 @@ body{
 
 
 #navMenu{
+    z-index: 999;
     width: 100%;
     display: grid;
     background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));

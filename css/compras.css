@@ -20,6 +20,7 @@ body{
 
 
 #navMenu{
+    z-index: 999;
     width: 100%;
     display: grid;
     background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
@@ -74,37 +75,225 @@ img{
     font-style: italic;
     color: white;
 }
-/*Tamaño de letra Titulo de Formulario*/
-#tituloCompras{
-    font-size: 40px;
-    text-align: center;
-    text-decoration: underline;
+
+/*Grilla Indumentaria*/
+#grillaIndu{
+    padding-top: 200px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 500px 500px 500px;
 }
-/*Color de fondo recuadro formulario*/
-fieldset{
-    background-color: rgba(245, 255, 250, 0.521);
-    margin-top: 250px;
-    display: inline;
-    margin-left: auto;
-    margin-right: auto;
-    margin-left: 38%;
-}
-/*Color de fondo selectores de tipo*/
 select{
-    background-color: darkgray;
+    background-color: rgba(0, 0, 0, 0.774);
+    color: white;
 }
-/*color de fondo botones de ejecucion*/
 input{
-    background-color: darkgray;
+    background-color: rgba(0, 0, 0, 0.774);
+    text-align: center;
+    color: white;
 }
-/*color de fondo boton index*/
-button{
-    background-color: darkgray;
+/*Remeras*/
+.remeras{
+    display: grid;
+    justify-content: center; 
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 50px 350px 30px 30px;
+    grid-template-areas: "TR TR"
+                         "RH RM"
+                         "SRH SRM"
+                         "IRH IRM";
+    column-gap: 300px;
+    row-gap: 30px;
 }
+.tituloRemeras{
+    grid-area: TR;
+    justify-self: center;
+    text-align: center;
+    align-self: center;
+    color: white;
+    width: 800px;
+    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
+}
+.rH{
+    grid-area: RH;
+    height: 350px;
+    border: solid black 4px;
+}
+.rH:hover{
+    transform: scale(1.5,1.5);
+    transition: 2s;
+}
+.srH{
+    grid-area: SRH;
+    width: 100px;
+    height: 20px;
+    justify-self: center;
+    align-self: flex-end;
+}
+.irH{
+    grid-area: IRH;
+    width: 100px;
+    height: 20px;
+    justify-self: center;
+}
+.rM{
+    grid-area: RM;
+    height: 350px;
+    border: solid black 4px;
+}
+.rM:hover{
+    transform: scale(1.5,1.5);
+    transition: 2s;
+}
+.srM{
+    grid-area: SRM;
+    width: 100px;
+    height: 20px;
+    justify-self: center;
+    align-self: flex-end;
+}
+.irM{
+    grid-area: IRM;
+    width: 100px;
+    height: 20px;
+    justify-self: center;
+}
+/*Buzos*/
+.buzos{
+    display: grid;
+    justify-content: center; 
+    grid-template-columns: 300px 300px;
+    grid-template-rows:  50px 350px 30px 30px;
+    grid-template-areas: "TB TB"
+                        "BH BM"
+                        "SBH SBM"
+                        "IBH IBM";
+    column-gap: 300px;
+    row-gap: 30px;
+    padding-top: 200px;
+}
+.tituloBuzos{
+    grid-area: TB;
+    justify-self: center;
+    text-align: center;
+    align-self: center;
+    color: white;
+    width: 800px;
+    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
+}
+.bH{
+    grid-area: BH;
+    height: 350px;
+    border: solid black 4px;
+}
+.bH:hover{
+    transform: scale(1.5,1.5);
+    transition: 2s;
+}
+.sbH{
+    grid-area: SBH;
+    width: 100px;
+    height: 20px;
+    justify-self: center;
+    align-self: flex-end;
+}
+.ibH{
+    grid-area: IBH;
+    width: 100px;
+    height: 20px;
+    justify-self: center;
+}
+.bM{
+    grid-area: BM;
+    height: 350px;
+    border: solid black 4px;
+}
+.bM:hover{
+    transform: scale(1.5,1.5);
+    transition: 2s;
+}
+.sbM{
+    grid-area: SBM;
+    width: 100px;
+    height: 20px;
+    justify-self: center;
+    align-self: flex-end;
+}
+.ibM{
+    grid-area: IBM;
+    width: 100px;
+    height: 20px;
+    justify-self: center;
+}
+/*Gorras*/
+.gorras{
+    display: grid;
+    justify-content: center; 
+    grid-template-columns: 300px 300px;
+    grid-template-rows:  50px 350px 30px 30px;
+    grid-template-areas: "TG TG"
+                        "GH GM"
+                        "SGH SGM"
+                        "IGH IGM";
+    column-gap: 300px;
+    row-gap: 30px;
+    padding-top: 300px;
+}
+.tituloGorras{
+    grid-area: TG;
+    justify-self: center;
+    text-align: center;
+    align-self: center;
+    color: white;
+    width: 800px;
+    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
+}
+.gH{
+    grid-area: GH;
+    height: 350px;
+    border: solid black 4px;
+}
+.gH:hover{
+    transform: scale(1.5,1.5);
+    transition: 2s;
+}
+.sgH{
+    grid-area: SGH;
+    width: 100px;
+    height: 20px;
+    justify-self: center;
+    align-self: flex-end;
+}
+.igH{
+    grid-area: IGH;
+    width: 100px;
+    height: 20px;
+    justify-self: center;
+}
+.gM{
+    grid-area: GM;
+    height: 350px;
+    border: solid black 4px;
+}
+.gM:hover{
+    transform: scale(1.5,1.5);
+    transition: 2s;
+}
+.sgM{
+    grid-area: SGM;
+    width: 100px;
+    height: 20px;
+    justify-self: center;
+    align-self: flex-end;
+}
+.igM{
+    grid-area: IGM;
+    width: 100px;
+    height: 20px;
+    justify-self: center;
+}
+
 /*Pie de Pagina*/
-
-
-
 footer{  
     background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
     width: 100%;
@@ -119,7 +308,7 @@ footer{
     align-items: center;
     color: white;
     text-decoration: underline white;
-    margin-top: 350px;
+    margin-top: 450px;
 }
 .derechos{
     font-size: 15px;
