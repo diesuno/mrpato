@@ -4,111 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/contacto.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <title>Contacto</title>
 </head>
 <body>
-   <!--Barra Menus-->
-   <header id="headerMenu">
-    <nav id="navMenu">
-                <a href="../index.html"class="logo">
-                    <img src="../img/logo.png" alt="" >
-                </a>
-                <li class="optUno">
-                    <a href="../html/Juegos.html" id="aM">JUEGOS</a>
-                </li>
-                <li class="optDos">
-                    <a href="../html/Donación.html" id="aM">DONACIÓN</a>
-                </li>
-                <li class="optTres">
-                    <a href="../html/Compras.html" id="aM">COMPRAS</a>
-                </li>
-                <li class="optCuatro">
-                    <a href="../html/Contacto.html" id="aM">CONTACTO</a>
-                </li>
-    </nav>
-</header>
-<!--titulo-->
-    <!--Formulario-->
-    <form action="" method="">
-        <fieldset id="FormularioPrincial">
-            <p id="tituloFormulario">Comunicate con Mr Paato</p>
-            <Label for="Nombre">Nombre: </Label>
-            <input type="text" id="Nombre">
-            <br><br>
-            <Label for="Apellido">Apellido: </Label>
-            <input type="text" id="Apellido">
-            <br><br>
-            <Label for="Empresa">Empresa: </Label>
-            <input type="text" id="Empresa" placeholder="Opcional">
-            <br><br>
-            <Label for="Celular">Celular: </Label>
-            <input type="text" id="Celular">
-            <br><br>
-            <Label for="correoElectronico">E-Mail: </Label>
-            <input type="text" id="correoElectronico">
-            <br><br>
-            <!--selector de pais-->
-            <Label>Pais: </Label>
-                <select name="" id="">
-                    <option value="">Elija</option>
-                    <option value="">Argentina</option>
-                    <option value="">Brasil</option>
-                    <option value="">Chile</option>
-                    <option value="">Uruguay</option>
-                </select>
-                <br><br>
-            <Label for="Provincia">Provincia: </Label>
-            <input type="text" id="Provincia">
-            <br><br>
-            <Label for="Localidad">Localidad: </Label>
-            <input type="text" id="Localidad">
-            <br><br>
-            <Label for="Direccion">Direccion: </Label>
-            <input type="text" id="Direccion">
-
-            <br><br>
-            <label>Comentarios: </label>
-            <br><br>
-    
-        <textarea name="" id="" cols="75" rows="15">
-
-
-
-        </textarea>
-
-                <!--botones de ejecucion-->
-                <br>
-                <input type="checkbox">Confirma que la informacion suministradada es verdadera</input>
-                <Br><br>
-               
-                
-        
-        
-        
-        
-        
-            
-        
-            <br>
-                <input type="submit" value="Enviar Formulario">
-            <br><br>
-                <input type="reset" value="Restablecer">
-        </fieldset>
-
-    </form>
-    <br>
-</Header>
+   <!--Barra Menus con bootstrap y collapse-->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="" id="logo" ></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="../index.html" id="aM">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/Compras.html" id="aM">Compras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/Juegos.html" id="aM">Juegos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/Contacto.html" id="aM">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> 
+<!--Formulario-->
+<div>
+  <h1></h1>
+</div>
+    <div class="container text-center" id="contacto">
+        <form class="row g-3" id="form">
+            <div class="col-md-4">
+              <label for="validationDefault01" class="form-label" id="textColor">NOMBRE</label>
+              <input type="text" class="form-control" id="validationDefault01" value="Nombre" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationDefault02" class="form-label" id="textColor">APELLIDO</label>
+              <input type="text" class="form-control" id="validationDefault02" value="Apellido" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationDefaultUsername" class="form-label" id="textColor">E-MAIL</label>
+              <div class="input-group">
+                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationDefault03" class="form-label" id="textColor">CIUDAD</label>
+              <input type="text" class="form-control" id="validationDefault03" required>
+            </div>
+            <div class="col-md-3">
+              <label for="validationDefault04" class="form-label " id="textColor">PROVINCIA</label>
+              <select class="form-select" id="validationDefault04" required>
+                <option selected disabled value="">Elegir...</option>
+                <option>BUENOS AIRES</option>
+                <option>CATAMARCA</option>
+                <option>CORDOBA</option>
+                <option>ENTRE RIOS</option>
+                <option>LA RIOJA</option>
+                <option>JUJUY</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="validationDefault05" class="form-label" id="textColor">CODIGO POSTAL</label>
+              <input type="text" class="form-control" id="validationDefault05" required>
+            </div>
+            <div class="col-12">
+              <div class="form-check" id="textColor">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                <label class="form-check-label" for="invalidCheck2">
+                  Acepta los terminos y condiciones 
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+          </form>
+      </div>
+      <!--Sponsors aplique carousel y le añadi grid-->
+      <div id="carouselExampleSlidesOnly" class="carousel slide grid-Carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../img/sponsors/amd-logo-1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/sponsors/1200px-New_AMD_Radeon_logo_(2020).svg.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/sponsors/Logitech-Logo.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/sponsors/samsung-logo-4.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/sponsors/hyper-x-logo.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/sponsors/msi-logo-1.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <!--Footer con redes sociales y breadcrumb-->
 <footer>
-    <section id="barraFooter">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+    </ol>
+  </nav>
+  <section id="barraFooter">
         <a href="https://www.instagram.com/mrpaato/?hl=es-la"><img src="../img/instagram.png" alt="" class="iN"></a>
         <a href="https://www.youtube.com/channel/UCt0Fhja0cOJB4lcVyDGI4-g"><img src="../img/youtube-logo-5-2.png" alt="" class="yT"></a>
         <a href="https://www.facebook.com/paato.twitch/"><img src="../img/Facebook_f_logo_(2019).png" alt="" class="fB"></a>
         <a href="https://www.twitch.tv/mrpaato"><img src="../img/twitch.jpg" alt="" class="tC"></a>
-        <p class="derechos">Todos los derechos reservados MrPaato es una marca propiedad de Diego Bruno®</p>
-    </section>   
+  </section>   
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
