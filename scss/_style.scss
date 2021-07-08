@@ -1,0 +1,570 @@
+/*Cuerpo de pagina */  
+*{
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background: url(../img/fondo.jpg) no-repeat center center fixed;
+        background-size: cover;  
+    }
+}
+/*Menu nav y logo*/
+.navbar-brand{
+    width: 15%;
+    animation-name: logo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    @keyframes logo{
+    from {
+          transform: rotatex(0deg)
+        }
+    to{
+          transform: rotateX(360deg)
+        }
+      }
+    #logo{
+          width: 70px;
+          height: 70px;
+      }
+    img{
+          width: 100%;
+      }
+    #aM{
+          font-size: 20px;
+      }
+}
+/*Pie de Pagina*/
+footer{ 
+    margin-top: 500px;
+    display: grid;
+    grid-template-columns: 150px 60px ;
+    grid-template-rows: 120px  120px 50px;
+    grid-template-areas: "Marca"
+                         "redes"
+                         "bF";
+    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+.marca{
+    padding-top: 30px;
+    grid-area: Marca;
+    width: 120px;
+    height: 120px;
+}
+#breadFooter{
+    grid-area: bF;
+}
+#redes{
+    padding-top: 20px;
+    grid-area: redes;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: 50px;
+    grid-template-areas: "in yo fb tw";
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 30px;
+}
+.iN{
+    grid-area: in;
+}
+.yT{
+    grid-area: yo;
+}
+.fB{
+    grid-area: fa;
+}
+.tC{
+    grid-area: tw;
+} 
+img{
+    width: 100%;
+}
+}
+
+/*Index*/
+/*Video Promocional*/
+#presentacion{
+    display: flex;
+    justify-content: center;
+    video{
+        margin-top: 200px;
+        margin-bottom: 200px;
+        width: 640px;
+        height: 640px;
+    }
+}
+/*Acerca*/
+#acerca{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    .reseña{
+        width: 70%;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.808);
+        font-size: 30px;
+        line-height: 1.3;
+        border: solid rgba(0, 0, 0, 0.411);
+        background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
+    }
+}
+
+
+
+
+/*Compras*/
+/*Grilla Indumentaria*/
+#grillaIndu{
+    padding-top: 200px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 500px 500px 500px;
+    row-gap: 0px;
+    select{
+        background-color: rgba(0, 0, 0, 0.774);
+        color: white;
+    }
+    input{
+        background-color: rgba(0, 0, 0, 0.774);
+        text-align: center;
+        color: white;
+    }
+    img{
+        width: 100%;
+    }
+    /*Remeras*/
+    .remeras{
+        display: grid;
+        justify-content: center; 
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 50px 350px 30px 30px;
+        grid-template-areas: "TR TR"
+                             "RH RM"
+                             "SRH SRM"
+                             "IRH IRM";
+        column-gap: 300px;
+        row-gap: 30px;
+        .tituloRemeras{
+            grid-area: TR;
+            justify-self: center;
+            text-align: center;
+            align-self: center;
+            color: white;
+            width: 800px;
+            background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
+        }
+        .rH{
+            grid-area: RH;
+            height: 350px;
+            border: solid black 4px;
+        }
+        .rH:hover{
+            transform: scale(1.5,1.5);
+            transition: 2s;
+        }
+        .srH{
+            grid-area: SRH;
+            width: 100px;
+            height: 20px;
+            justify-self: center;
+            align-self: flex-end;
+        }
+        .irH{
+            grid-area: IRH;
+            width: 100px;
+            height: 20px;
+            justify-self: center;
+        }
+        .rM{
+            grid-area: RM;
+            height: 350px;
+            border: solid black 4px;
+        }
+        .rM:hover{
+            transform: scale(1.5,1.5);
+            transition: 2s;
+        }
+        .srM{
+            grid-area: SRM;
+            width: 100px;
+            height: 20px;
+            justify-self: center;
+            align-self: flex-end;
+        }
+        .irM{
+            grid-area: IRM;
+            width: 100px;
+            height: 20px;
+            justify-self: center;
+        }
+    }
+    /*Buzos*/
+    .buzos{
+    display: grid;
+    justify-content: center; 
+    grid-template-columns: 300px 300px;
+    grid-template-rows:  50px 350px 30px 30px;
+    grid-template-areas: "TB TB"
+                        "BH BM"
+                        "SBH SBM"
+                        "IBH IBM";
+    column-gap: 300px;
+    row-gap: 30px;
+    padding-top: 200px;
+    .tituloBuzos{
+        grid-area: TB;
+        justify-self: center;
+        text-align: center;
+        align-self: center;
+        color: white;
+        width: 800px;
+        background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
+    }
+    .bH{
+        grid-area: BH;
+        height: 350px;
+        border: solid black 4px;
+    }
+    .bH:hover{
+        transform: scale(1.5,1.5);
+        transition: 2s;
+    }
+    .sbH{
+        grid-area: SBH;
+        width: 100px;
+        height: 20px;
+        justify-self: center;
+        align-self: flex-end;
+    }
+    .ibH{
+        grid-area: IBH;
+        width: 100px;
+        height: 20px;
+        justify-self: center;
+    }
+    .bM{
+        grid-area: BM;
+        height: 350px;
+        border: solid black 4px;
+    }
+    .bM:hover{
+        transform: scale(1.5,1.5);
+        transition: 2s;
+    }
+    .sbM{
+        grid-area: SBM;
+        width: 100px;
+        height: 20px;
+        justify-self: center;
+        align-self: flex-end;
+    }
+    .ibM{
+        grid-area: IBM;
+        width: 100px;
+        height: 20px;
+        justify-self: center;
+    }
+    }
+    /*Gorras*/
+    .gorras{
+        display: grid;
+        justify-content: center; 
+        grid-template-columns: 300px 300px;
+        grid-template-rows:  50px 350px 30px 30px;
+        grid-template-areas: "TG TG"
+                            "GH GM"
+                            "SGH SGM"
+                            "IGH IGM";
+        column-gap: 300px;
+        row-gap: 30px;
+        padding-top: 300px;
+        .tituloGorras{
+            grid-area: TG;
+            justify-self: center;
+            text-align: center;
+            align-self: center;
+            color: white;
+            width: 800px;
+            background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
+        }
+        .gH{
+            grid-area: GH;
+            height: 350px;
+            border: solid black 4px;
+        }
+        .gH:hover{
+            transform: scale(1.5,1.5);
+            transition: 2s;
+        }
+        .sgH{
+            grid-area: SGH;
+            width: 100px;
+            height: 20px;
+            justify-self: center;
+            align-self: flex-end;
+        }
+        .igH{
+            grid-area: IGH;
+            width: 100px;
+            height: 20px;
+            justify-self: center;
+        }
+        .gM{
+            grid-area: GM;
+            height: 350px;
+            border: solid black 4px;
+        }
+        .gM:hover{
+            transform: scale(1.5,1.5);
+            transition: 2s;
+        }
+        .sgM{
+            grid-area: SGM;
+            width: 100px;
+            height: 20px;
+            justify-self: center;
+            align-self: flex-end;
+        }
+        .igM{
+            grid-area: IGM;
+            width: 100px;
+            height: 20px;
+            justify-self: center;
+        }
+    }
+}
+
+
+/*Juegos*/
+/*Grilla de imagenes*/
+#grilla{
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 700px 800px 500px;
+    justify-items: center;
+    align-items: center;
+    /*seccion 1*/
+    .sec1{
+        height: 450px;
+        width: 1500px;
+        background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
+        display: grid;
+        grid-template-columns: 400px 150px 400px ;
+        grid-template-rows: 50px 50px 250px ;
+        grid-template-areas:  "b1 sT1 b2" 
+                              "b3 b4 b5"
+                              "wZ b6 rE";
+        row-gap: 10px;
+        column-gap: 10px;
+        justify-content: space-evenly;
+        .sT1{
+        
+            grid-area: sT1;
+            text-align: center;
+            
+            font-size: 30px;
+            color: white;
+            text-decoration: underline white;  
+        }
+        .wZ{
+            grid-area: wZ;
+        }
+        .wZ:hover{
+            transform: scale(1.5,1.5);
+            transition: 2s;
+        }
+        .rE{
+            grid-area: rE;  
+        }
+        .rE:hover{
+            transform: scale(1.5,1.5);
+            transition: 2s;
+        }
+        .b1{
+            grid-area: b1;
+        }
+        .b2{
+            grid-area: b2;
+        }
+        .b3{  
+            grid-area: b3;
+            color: white;
+            text-decoration: underline white;
+            font-size: 25px;
+            justify-self: center;
+        }
+        .b4{
+            grid-area: b4;
+        }
+        .b5{
+            grid-area: b5;
+            color: white;
+            text-decoration: underline white;
+            font-size: 25px;
+            justify-self: center; 
+        }
+        .b6{
+            grid-area: b6;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    /*seccion 2*/
+    .sec2{
+        width: 1500px;
+        background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
+        display: grid;
+        grid-template-columns: 400px 400px 400px;
+        grid-template-rows: 150px 50px 300px 50px 300px;
+        grid-template-areas:  "c1 sT2 c2" 
+                              "c3 c4 c5"
+                              "dO sC wC"
+                              "c6 c7 c8"
+                              "aOE b9 hR";
+        row-gap: 10px;
+        column-gap: 10px; 
+        justify-content: center;
+        align-content: center;
+        .sT2{
+            grid-area: sT2;
+            text-align: center;
+            color: white;
+            text-decoration: underline white;
+            font-size: 30px;
+              
+        }
+        .dO{
+            grid-area: dO; 
+        }
+        .dO:hover{
+            transform: scale(1.5,1.5);
+            transition: 2s;
+        }
+        .sC{
+            grid-area: sC; 
+        }
+        .sC:hover{
+            transform: scale(1.5,1.5);
+            transition: 2s;
+        }
+        .wC{
+            grid-area: wC; 
+        }
+        .wC:hover{
+            transform: scale(1.5,1.5);
+            transition: 2s;
+        }
+        .aOE{
+            grid-area: aOE; 
+        }
+        .aOE:hover{
+            transform: scale(1.5,1.5);
+            transition: 2s;
+        }
+        .hR{
+            grid-area: hR; 
+        }
+        .hR:hover{
+            transform: scale(1.5,1.5);
+            transition: 2s;
+        }
+        .c1{
+            grid-area: c1; 
+        }
+        .c2{
+            grid-area: c2; 
+        }
+        .c3{
+            grid-area: c3;
+            color: white;
+            text-decoration: underline white;
+            font-size: 25px;
+            justify-self: center;
+        }
+        .c4{
+            grid-area: c4;
+            color: white;
+            text-decoration: underline white;
+            font-size: 25px;;
+            justify-self: center; 
+        }
+        .c5{
+            grid-area: c5;
+            color: white;
+            text-decoration: underline white;
+            font-size: 25px;
+            justify-self: center; 
+        }
+        .c6{
+            grid-area: c6;
+            color: white;
+            text-decoration: underline white;
+            font-size: 25px;
+            justify-self: center;
+        }
+        .c7{
+            grid-area: c7; 
+        }
+        .c8{
+            grid-area: c8;
+            color: white;
+            text-decoration: underline white;
+            font-size: 25px;
+            justify-self: center; 
+        }
+        .c9{
+            grid-area: c9; 
+        } 
+        img{
+            width: 100%;
+        }
+    }
+    
+}
+
+
+/*Contacto*/
+/*Seccion Formulario*/
+#contacto{
+    padding-top: 200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns:  300px ;
+    grid-template-rows: 300px ;
+    grid-template-areas: "form form form";
+    justify-content: space-evenly;
+    column-gap: 20px;
+    row-gap: 100px;
+    margin-bottom: 200px;
+    #form{
+        grid-area: form;
+    }
+    #textColor{
+        color: white;
+    }
+}
+/*spornsors*/
+.grid-Carousel{
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 400px;
+    grid-template-areas: "carousel";
+    justify-content: center;
+    align-items: center;
+    #carouselExampleSlidesOnly{
+        grid-area: carousel;
+    }
+    /*media query de una parte del carousel que me quedaba muy abajo*/
+    @media only screen and (min-width: 768px){
+    
+        .grid-Carousel{
+            align-items: initial;
+        }
+    }
+}
+
