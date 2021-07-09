@@ -347,20 +347,25 @@ img{
     grid-template-rows: 700px 800px 500px;
     justify-items: center;
     align-items: center;
+    @mixin juegos ($ancho, $fondo, $alto, $grilla, $columna, $filas, $rowG, $ColumG, $justify, $areas){
+        width: $ancho;
+        background-color: $fondo;
+        height: $alto;
+        display: $grilla;
+        grid-template-columns: $columna;
+        grid-template-rows: $filas;
+        grid-template-areas: $areas;
+        row-gap: $rowG;
+        column-gap: $ColumG;
+        justify-content: $justify
+        
+    }
     /*seccion 1*/
+
     .sec1{
-        height: 450px;
-        width: 1500px;
-        background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
-        display: grid;
-        grid-template-columns: 400px 150px 400px ;
-        grid-template-rows: 50px 50px 250px ;
-        grid-template-areas:  "b1 sT1 b2" 
-                              "b3 b4 b5"
-                              "wZ b6 rE";
-        row-gap: 10px;
-        column-gap: 10px;
-        justify-content: space-evenly;
+        @include juegos(1500px, rgba(0, 0, 0, 0.774), 450px, grid, 400px 150px 400px, 50px 50px 250px, 10px, 10px, space-evenly, "b1 sT1 b2" 
+                                                                                                                                   "b3 b4 b5"
+                                                                                                                                   "wZ b6 rE");
         .sT1{
         
             grid-area: sT1;
@@ -416,20 +421,12 @@ img{
     }
     /*seccion 2*/
     .sec2{
-        width: 1500px;
-        background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
-        display: grid;
-        grid-template-columns: 400px 400px 400px;
-        grid-template-rows: 150px 50px 300px 50px 300px;
-        grid-template-areas:  "c1 sT2 c2" 
-                              "c3 c4 c5"
-                              "dO sC wC"
-                              "c6 c7 c8"
-                              "aOE b9 hR";
-        row-gap: 10px;
-        column-gap: 10px; 
-        justify-content: center;
-        align-content: center;
+        @include juegos(1500px, rgba(0, 0, 0, 0.774), 900px, grid, 400px 400px 400px, 150px 50px 300px 50px 300px, 10px, 30px, center, "c1 sT2 c2" 
+                                                                                                                                         "c3 c4 c5"
+                                                                                                                                         "dO sC wC"
+                                                                                                                                         "c6 c7 c8"
+                                                                                                                                         "aOE b9 hR");
+
         .sT2{
             grid-area: sT2;
             text-align: center;

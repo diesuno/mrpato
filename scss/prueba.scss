@@ -1,0 +1,13 @@
+@mixin juegos ($ancho, $fondo, $alto){
+    width: $ancho;
+    background-color: $fondo;
+    height: $alto
+}
+@include juegos(1500px, rgba(0, 0, 0, 0.774), 450px, grid, 400px 150px 400px, 50px 50px 250px, 10px, 10px, space-evenly, "b1 sT1 b2" 
+"b3 b4 b5"
+"wZ b6 rE");
+@include juegos(1500px, rgba(0, 0, 0, 0.774), 900px, grid, 400px 400px 400px, 150px 50px 300px 50px 300px, 10px, 10px, space-evenly, "c1 sT2 c2" 
+"c3 c4 c5"
+"dO sC wC"
+"c6 c7 c8"
+"aOE b9 hR");
