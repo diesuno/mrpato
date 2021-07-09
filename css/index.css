@@ -14,66 +14,30 @@ body{
 /*Menu nav y logo*/
 
 
-
-
-#navMenu{
-    z-index: 999;
-    width: 100%;
-    display: grid;
-    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
-    grid-template-columns: 100px 15% 15% 15% 15% 60px;
-    grid-template-rows: 100px;
-    grid-template-areas: "Logo Acerca Redes Compras Contacto Carrito";
-    justify-content: space-evenly;
-    align-items: center;
-    list-style-type: none;
-    position: fixed;
-    text-align: center;
-}
-li:hover{
-    transform: scale(1.5,1.5);
-}
-.logo{
-    grid-area: Logo;
+.navbar-brand{
+    width: 15%;
     animation-name: logo;
     animation-duration: 6s;
     animation-iteration-count: infinite;
 }
+
 @keyframes logo{
   from {
-    transform: rotateY(0deg)
+    transform: rotatex(0deg)
   }
   to{
-    transform: rotateY(360deg)
+    transform: rotateX(360deg)
   }
 }
-.optUno{
-    grid-area: Acerca;
-    width: 100%;
-}
-.optDos{
-    grid-area: Redes;
-    width: 100%;
-}
-.optTres{
-    grid-area: Compras;
-    width: 100%;
-}
-.optCuatro{
-    grid-area: Contacto;
-    width: 100%;
-}
-.carrito{
-    grid-area: Carrito;
+#logo{
+    width: 70px;
+    height: 70px;
 }
 img{
     width: 100%;
 }
 #aM{
-    text-decoration: none;
     font-size: 20px;
-    font-style: italic;
-    color: white;
 }
 /*Video Promocional*/
 #presentacion{
@@ -85,7 +49,7 @@ video{
     margin-top: 200px;
     margin-bottom: 200px;
     width: 640px;
-    height: 640px;
+    height: 480px;
 }
 /*Acerca*/
 
@@ -107,28 +71,39 @@ video{
 }
 
 /*Pie de Pagina*/
-
-
-
-footer{  
+footer{ 
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 150px;
+    grid-template-rows: 120px  120px 50px;
+    grid-template-areas: "Marca"
+                         "redes"
+                         "bF";
     background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
     width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
 }
-#barraFooter{
+.marca{
+    padding-top: 30px;
+    grid-area: Marca;
+    width: 120px;
+    height: 120px;
+}
+#breadFooter{
+    grid-area: bF;
+}
+#redes{
+    padding-top: 20px;
+    grid-area: redes;
     display: grid;
-    grid-template-areas: "yo fa in tw derechos";   
-    grid-template-columns: 50px 50px 50px 50px 600px;
+    grid-template-columns: 50px 50px 50px 50px;
     grid-template-rows: 50px;
-    height: 50px;
+    grid-template-areas: "in yo fb tw";
     justify-content: space-around;
     align-items: center;
-    color: white;
-    text-decoration: underline white;
-    margin-top: 150px;
-}
-.derechos{
-    font-size: 15px;
-    grid-area: derechos;
+    column-gap: 30px;
 }
 .iN{
     grid-area: in;
@@ -141,5 +116,134 @@ footer{
 }
 .tC{
     grid-area: tw;
-}
+} 
 
+
+
+/* small devices (tablets, 548px and up)*/
+@media only screen and (min-width: 548px) {
+    #aM{
+        font-size: 13px;
+    }
+    video{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 500px;
+        height: 400px;
+    }
+    .reseña{
+        font-size: 15px;
+        line-height: 1.1;
+    }
+    footer{ 
+        grid-template-columns: 120px;
+        grid-template-rows: 90px  30px 30px;
+        width: 100%;
+        height: 200px;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    .marca{
+        width: 90px;
+        height: 90px;
+    }
+    #redes{
+        grid-template-columns: 30px 30px 30px 30px;
+        grid-template-rows: 30px;
+    }
+
+ }
+
+/* Medium devices (tablets, 768px and up)*/
+@media only screen and (min-width: 768px) {
+    #aM{
+        font-size: 17px;
+    }
+    video{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 640px;
+        height: 480px;
+    }
+    .reseña{
+        font-size: 17px;
+        line-height: 1.2;
+    }
+    footer{ 
+        padding-top: 10px;
+        grid-template-columns: 120px;
+        grid-template-rows: 90px  30px 30px;
+        height: 230px;
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+    .marca{
+        width: 100px;
+        height: 100px;
+    }
+    #redes{
+        grid-template-columns: 35px 35px 35px 35px;
+        grid-template-rows: 35px;
+    }
+ }
+/* Large devices (desktops)*/
+@media only screen and (min-width: 992px) {
+    #aM{
+        font-size: 17px;
+    }
+    video{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 640px;
+        height: 480px;
+    }
+    .reseña{
+        font-size: 25px;
+        line-height: 1.3;
+    }
+    footer{ 
+        padding-top: 20px;
+        grid-template-columns: 120px;
+        grid-template-rows: 90px  30px 30px;
+        height: 260px;
+        column-gap: 27px;
+        row-gap: 27px;
+    }
+    .marca{
+        width: 110px;
+        height: 110px;
+    }
+    #redes{
+        grid-template-columns: 37px 37px 37px 37px;
+        grid-template-rows: 37px;
+    }
+ }
+
+/* Extra large devices (large desktops)*/
+@media only screen and (min-width: 1200px) {
+    #aM{
+        font-size: 20px;
+    }
+
+    .reseña{
+        font-size: 30px;
+        line-height: 1.3;
+    }
+    footer{ 
+        padding-top: 30px;
+        grid-template-columns: 120px;
+        grid-template-rows: 120px  30px 30px;
+        width: 100%;
+        height: 300px;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    .marca{
+        width: 120px;
+        height: 120px;
+    }
+    #redes{
+        grid-template-columns: 40px 40px 40px 40px;
+        grid-template-rows: 40px;
+    }
+}

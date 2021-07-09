@@ -4,36 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/Juegos.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <title>Juegos</title>
 </head>
 <body>
-     <!--Barra Menus-->
-     <header id="headerMenu">
-        <nav id="navMenu">
-                    <a href="../index.html"class="logo">
-                        <img src="../img/logo.png" alt="" >
-                    </a>
-                    <li class="optUno">
-                        <a href="../html/Juegos.html" id="aM">JUEGOS</a>
-                    </li>
-                    <li class="optDos">
-                        <a href="../html/Donación.html" id="aM">DONACIÓN</a>
-                    </li>
-                    <li class="optTres">
-                        <a href="../html/Compras.html" id="aM">COMPRAS</a>
-                    </li>
-                    <li class="optCuatro">
-                        <a href="../html/Contacto.html" id="aM">CONTACTO</a>
-                    </li>
-        </nav>
-    </header>
+      <!--Barra Menus con bootstrap y collapse-->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="" id="logo" ></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="../index.html" id="aM">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/Compras.html" id="aM">Compras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/Juegos.html" id="aM">Juegos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/Contacto.html" id="aM">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> 
+
+
     <div id="grilla">
         <section class="sec1">
             <h1 class="sT1">Streaming</h1>
-
         <!--Los A los uso como bloques para ajustar en el espacio las cosas-->
             <a href="" class="b1"></a>
             <a href="" class="b2"></a>
@@ -62,14 +69,26 @@
             <img src="../img/hR.jpg" alt="" class="hR">
         </section>
     </div>
-    <footer>
-            <section id="barraFooter">
-                <a href="https://www.instagram.com/mrpaato/?hl=es-la"><img src="../img/instagram.png" alt="" class="iN"></a>
-                <a href="https://www.youtube.com/channel/UCt0Fhja0cOJB4lcVyDGI4-g"><img src="../img/youtube-logo-5-2.png" alt="" class="yT"></a>
-                <a href="https://www.facebook.com/paato.twitch/"><img src="../img/Facebook_f_logo_(2019).png" alt="" class="fB"></a>
-                <a href="https://www.twitch.tv/mrpaato"><img src="../img/twitch.jpg" alt="" class="tC"></a>
-                <p class="derechos">Todos los derechos reservados MrPaato es una marca propiedad de Diego Bruno®</p>
-            </section>   
-    </footer>
+<!--Footer con redes sociales y breadcrumb-->
+<footer>
+    <section class="marca">
+      <a href="../index.html"><img src="../img/logo.png" alt="" id="logoFooter"></a>
+    </section>
+  <section id="redes">
+        <a href="https://www.instagram.com/mrpaato/?hl=es-la"><img src="../img/instagram.png" alt="" class="iN"></a>
+        <a href="https://www.youtube.com/channel/UCt0Fhja0cOJB4lcVyDGI4-g"><img src="../img/youtube-logo-5-2.png" alt="" class="yT"></a>
+        <a href="https://www.facebook.com/paato.twitch/"><img src="../img/Facebook_f_logo_(2019).png" alt="" class="fB"></a>
+        <a href="https://www.twitch.tv/mrpaato"><img src="../img/twitch.jpg" alt="" class="tC"></a>
+  </section>  
+  <section id="breadFooter">
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Juegos</li>
+      </ol>
+      </nav> 
+  </section>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>

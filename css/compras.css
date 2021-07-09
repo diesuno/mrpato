@@ -17,71 +17,37 @@ body{
 /*Menu nav y logo*/
 
 
-
-
-#navMenu{
-    z-index: 999;
-    width: 100%;
-    display: grid;
-    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
-    grid-template-columns: 100px 20% 20% 20% 20%;
-    grid-template-rows: 100px;
-    grid-template-areas: "Logo Acerca Redes Compras Contacto";
-    justify-content: space-evenly;
-    align-items: center;
-    list-style-type: none;
-    position: fixed;
-    text-align: center;
-}
-li:hover{
-    transform: scale(1.5,1.5);
-}
-.logo{
-    grid-area: Logo;
+.navbar-brand{
+    width: 15%;
     animation-name: logo;
     animation-duration: 6s;
     animation-iteration-count: infinite;
 }
+
 @keyframes logo{
   from {
-    transform: rotateY(0deg)
+    transform: rotatex(0deg)
   }
   to{
-    transform: rotateY(360deg)
+    transform: rotateX(360deg)
   }
 }
-.optUno{
-    grid-area: Acerca;
-    width: 100%;
-}
-.optDos{
-    grid-area: Redes;
-    width: 100%;
-}
-.optTres{
-    grid-area: Compras;
-    width: 100%;
-}
-.optCuatro{
-    grid-area: Contacto;
-    width: 100%;
+#logo{
+    width: 70px;
+    height: 70px;
 }
 img{
     width: 100%;
 }
 #aM{
-    text-decoration: none;
     font-size: 20px;
-    font-style: italic;
-    color: white;
 }
-
 /*Grilla Indumentaria*/
 #grillaIndu{
     padding-top: 200px;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 500px 500px 500px;
+    grid-template-rows: 800px 800px 800px;
 }
 select{
     background-color: rgba(0, 0, 0, 0.774);
@@ -96,13 +62,13 @@ input{
 .remeras{
     display: grid;
     justify-content: center; 
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 50px 350px 30px 30px;
+    grid-template-columns: 311px 311px;
+    grid-template-rows: 50px 568px 30px 30px;
     grid-template-areas: "TR TR"
                          "RH RM"
                          "SRH SRM"
                          "IRH IRM";
-    column-gap: 300px;
+    column-gap: 100px;
     row-gap: 30px;
 }
 .tituloRemeras{
@@ -111,12 +77,11 @@ input{
     text-align: center;
     align-self: center;
     color: white;
-    width: 800px;
+    width: 80%;
     background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
 }
 .rH{
     grid-area: RH;
-    height: 350px;
     border: solid black 4px;
 }
 .rH:hover{
@@ -138,7 +103,6 @@ input{
 }
 .rM{
     grid-area: RM;
-    height: 350px;
     border: solid black 4px;
 }
 .rM:hover{
@@ -162,15 +126,15 @@ input{
 .buzos{
     display: grid;
     justify-content: center; 
-    grid-template-columns: 300px 300px;
-    grid-template-rows:  50px 350px 30px 30px;
+    grid-template-columns: 311px 311px;
+    grid-template-rows:  50px 568px 30px 30px;
     grid-template-areas: "TB TB"
                         "BH BM"
                         "SBH SBM"
                         "IBH IBM";
-    column-gap: 300px;
+    column-gap: 100px;
     row-gap: 30px;
-    padding-top: 200px;
+
 }
 .tituloBuzos{
     grid-area: TB;
@@ -178,12 +142,11 @@ input{
     text-align: center;
     align-self: center;
     color: white;
-    width: 800px;
+    width: 80%;
     background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
 }
 .bH{
     grid-area: BH;
-    height: 350px;
     border: solid black 4px;
 }
 .bH:hover{
@@ -205,7 +168,6 @@ input{
 }
 .bM{
     grid-area: BM;
-    height: 350px;
     border: solid black 4px;
 }
 .bM:hover{
@@ -229,15 +191,15 @@ input{
 .gorras{
     display: grid;
     justify-content: center; 
-    grid-template-columns: 300px 300px;
-    grid-template-rows:  50px 350px 30px 30px;
+    grid-template-columns: 311px 311px;
+    grid-template-rows:  50px 568px 30px 30px;
     grid-template-areas: "TG TG"
-                        "GH GM"
-                        "SGH SGM"
-                        "IGH IGM";
-    column-gap: 300px;
+                         "GH GM"
+                         "SGH SGM"
+                         "IGH IGM";
+    column-gap: 100px;
     row-gap: 30px;
-    padding-top: 300px;
+
 }
 .tituloGorras{
     grid-area: TG;
@@ -245,12 +207,11 @@ input{
     text-align: center;
     align-self: center;
     color: white;
-    width: 800px;
+    width: 80%;
     background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
 }
 .gH{
     grid-area: GH;
-    height: 350px;
     border: solid black 4px;
 }
 .gH:hover{
@@ -272,7 +233,6 @@ input{
 }
 .gM{
     grid-area: GM;
-    height: 350px;
     border: solid black 4px;
 }
 .gM:hover{
@@ -294,25 +254,39 @@ input{
 }
 
 /*Pie de Pagina*/
-footer{  
+footer{ 
+    margin-top: 400px;
+    display: grid;
+    grid-template-columns: 150px;
+    grid-template-rows: 120px  120px 50px;
+    grid-template-areas: "Marca"
+                         "redes"
+                         "bF";
     background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
     width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
 }
-#barraFooter{
+.marca{
+    padding-top: 30px;
+    grid-area: Marca;
+    width: 120px;
+    height: 120px;
+}
+#breadFooter{
+    grid-area: bF;
+}
+#redes{
+    padding-top: 20px;
+    grid-area: redes;
     display: grid;
-    grid-template-areas: "yo fa in tw derechos";   
-    grid-template-columns: 50px 50px 50px 50px 600px;
+    grid-template-columns: 50px 50px 50px 50px;
     grid-template-rows: 50px;
-    height: 50px;
+    grid-template-areas: "in yo fb tw";
     justify-content: space-around;
     align-items: center;
-    color: white;
-    text-decoration: underline white;
-    margin-top: 450px;
-}
-.derechos{
-    font-size: 15px;
-    grid-area: derechos;
+    column-gap: 30px;
 }
 .iN{
     grid-area: in;
@@ -325,4 +299,291 @@ footer{
 }
 .tC{
     grid-area: tw;
-}
+} 
+
+/* small devices (tablets, 548px and up)*/
+@media only screen and (min-width: 548px) {
+    #aM{
+        font-size: 13px;
+    }
+
+    #grillaIndu{
+        grid-template-rows: 1600px 1600px 1600px;
+    }
+
+    /*Remeras*/
+    .remeras{
+        grid-template-columns: 311px;
+        grid-template-rows: 50px 568px 30px 30px 50px 568px 30px 30px;
+        grid-template-areas: "TR"
+                             "RH" 
+                             "SRH"
+                             "IRH"
+                             "RM"
+                             "SRM"
+                             "IRM";
+        column-gap: 0px;
+        row-gap: 20px;
+    }
+    .buzos{
+
+        grid-template-columns: 311px;
+        grid-template-rows:  50px 568px 30px 30px 50px 568px 30px 30px;
+        grid-template-areas: "TB"
+                            "BH"
+                            "SBH"
+                            "IBH"
+                            "BM"
+                            "SBM"
+                            "IBM";
+        column-gap: 0px;
+        row-gap: 20px;
+    
+    }
+    .gorras{
+
+        grid-template-columns: 311px;
+        grid-template-rows:  50px 568px 30px 30px 50px 568px 30px 30px;
+        grid-template-areas: "TG"
+                             "GH"
+                             "SGH" 
+                             "IGH" 
+                             "GM"
+                             "SGM"
+                             "IGM";
+        column-gap: 0px;
+        row-gap: 40px;
+    
+    }
+
+    footer{ 
+        grid-template-columns: 150px;
+        grid-template-rows: 90px 30px 30px;
+        width: 100%;
+        height: 240px;
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+    .marca{
+        width: 90px;
+        height: 90px;
+    }
+    #redes{
+        grid-template-columns: 30px 30px 30px 30px;
+        grid-template-rows: 30px;
+    }
+
+ }
+
+/* Medium devices (tablets, 768px and up)*/
+@media only screen and (min-width: 768px) {
+    #aM{
+        font-size: 17px;
+    }
+
+    #grillaIndu{
+        grid-template-rows: 1600px 1600px 1600px;
+    }
+
+    /*Remeras*/
+    .remeras{
+        grid-template-columns: 311px;
+        grid-template-rows: 50px 568px 30px 30px 50px 568px 30px 30px;
+        grid-template-areas: "TR"
+                             "RH" 
+                             "SRH"
+                             "IRH"
+                             "RM"
+                             "SRM"
+                             "IRM";
+        column-gap: 0px;
+        row-gap: 40px;
+    }
+    .buzos{
+
+        grid-template-columns: 311px;
+        grid-template-rows:  50px 568px 30px 30px 50px 568px 30px 30px;
+        grid-template-areas: "TB"
+                            "BH"
+                            "SBH"
+                            "IBH"
+                            "BM"
+                            "SBM"
+                            "IBM";
+        column-gap: 0px;
+        row-gap: 20px;
+    
+    }
+    .gorras{
+
+        grid-template-columns: 311px;
+        grid-template-rows:  50px 568px 30px 30px 50px 568px 30px 30px;
+        grid-template-areas: "TG"
+                             "GH"
+                             "SGH" 
+                             "IGH" 
+                             "GM"
+                             "SGM"
+                             "IGM";
+        column-gap: 0px;
+        row-gap: 20px;
+    
+    }
+ 
+
+
+    footer{ 
+        padding-top: 10px;
+        grid-template-columns: 150px;
+        grid-template-rows: 90px  30px 30px;
+        height: 230px;
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+    .marca{
+        width: 100px;
+        height: 100px;
+    }
+    #redes{
+        grid-template-columns: 35px 35px 35px 35px;
+        grid-template-rows: 35px;
+    }
+ }
+/* Large devices (desktops)*/
+@media only screen and (min-width: 992px) {
+    #aM{
+        font-size: 17px;
+    }
+    #grillaIndu{
+        padding-top: 200px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 800px 800px 800px;
+    }
+
+    .remeras{
+        display: grid;
+        justify-content: center; 
+        grid-template-columns: 311px 311px;
+        grid-template-rows: 50px 568px 30px 30px;
+        grid-template-areas: "TR TR"
+                             "RH RM"
+                             "SRH SRM"
+                             "IRH IRM";
+        column-gap: 100px;
+        row-gap: 30px;
+    }
+    .buzos{
+        display: grid;
+        justify-content: center; 
+        grid-template-columns: 311px 311px;
+        grid-template-rows:  50px 568px 30px 30px;
+        grid-template-areas: "TB TB"
+                            "BH BM"
+                            "SBH SBM"
+                            "IBH IBM";
+        column-gap: 100px;
+        row-gap: 30px;
+    
+    }
+    .gorras{
+        display: grid;
+        justify-content: center; 
+        grid-template-columns: 311px 311px;
+        grid-template-rows:  50px 568px 30px 30px;
+        grid-template-areas: "TG TG"
+                             "GH GM"
+                             "SGH SGM"
+                             "IGH IGM";
+        column-gap: 100px;
+        row-gap: 30px;
+    
+    }
+    footer{ 
+        padding-top: 20px;
+        grid-template-columns: 150px;
+        grid-template-rows: 90px  30px 30px;
+        height: 260px;
+        column-gap: 27px;
+        row-gap: 27px;
+    }
+    .marca{
+        width: 110px;
+        height: 110px;
+    }
+    #redes{
+        grid-template-columns: 37px 37px 37px 37px;
+        grid-template-rows: 37px;
+    }
+ }
+
+/* Extra large devices (large desktops)*/
+@media only screen and (min-width: 1200px) {
+    #aM{
+        font-size: 20px;
+    }
+    #grillaIndu{
+        padding-top: 200px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 800px 800px 800px;
+    }
+
+    .remeras{
+        display: grid;
+        justify-content: center; 
+        grid-template-columns: 311px 311px;
+        grid-template-rows: 50px 568px 30px 30px;
+        grid-template-areas: "TR TR"
+                             "RH RM"
+                             "SRH SRM"
+                             "IRH IRM";
+        column-gap: 100px;
+        row-gap: 30px;
+    }
+    .buzos{
+        display: grid;
+        justify-content: center; 
+        grid-template-columns: 311px 311px;
+        grid-template-rows:  50px 568px 30px 30px;
+        grid-template-areas: "TB TB"
+                            "BH BM"
+                            "SBH SBM"
+                            "IBH IBM";
+        column-gap: 100px;
+        row-gap: 30px;
+    
+    }
+    .gorras{
+        display: grid;
+        justify-content: center; 
+        grid-template-columns: 311px 311px;
+        grid-template-rows:  50px 568px 30px 30px;
+        grid-template-areas: "TG TG"
+                             "GH GM"
+                             "SGH SGM"
+                             "IGH IGM";
+        column-gap: 100px;
+        row-gap: 30px;
+    
+    }
+    footer{ 
+        padding-top: 30px;
+        grid-template-columns: 150px;
+        grid-template-rows: 120px  30px 30px;
+        width: 100%;
+        height: 300px;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    .marca{
+        width: 120px;
+        height: 120px;
+    }
+    #redes{
+        grid-template-columns: 40px 40px 40px 40px;
+        grid-template-rows: 40px;
+    }
+    }
+    
+

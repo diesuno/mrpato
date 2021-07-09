@@ -79,36 +79,52 @@ img{
     }
 }
 /*Pie de Pagina*/
-
 footer{ 
-    
-
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 150px 60px ;
+    grid-template-rows: 120px  120px 50px;
+    grid-template-areas: "Marca"
+                         "redes"
+                         "bF";
     background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
     width: 100%;
-    height: 100px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
 }
-#barraFooter{
+.marca{
+    padding-top: 30px;
+    grid-area: Marca;
+    width: 120px;
+    height: 120px;
+}
+#breadFooter{
+    grid-area: bF;
+}
+#redes{
+    padding-top: 20px;
+    grid-area: redes;
     display: grid;
-    grid-template-areas: "yo fa in tw";   
-    grid-template-columns: 40px 40px 40px 40px;
+    grid-template-columns: 50px 50px 50px 50px;
     grid-template-rows: 50px;
-
-    
+    grid-template-areas: "in yo fb tw";
     justify-content: space-around;
     align-items: center;
-
-
+    column-gap: 30px;
 }
 .iN{
-        grid-area: in;
-    }
+    grid-area: in;
+}
 .yT{
-        grid-area: yo;
-    }
+    grid-area: yo;
+}
 .fB{
-        grid-area: fa;
-    }
+    grid-area: fa;
+}
 .tC{
-        grid-area: tw;
-    } 
+    grid-area: tw;
+} 
+
+
 

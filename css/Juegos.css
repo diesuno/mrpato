@@ -17,67 +17,31 @@ body{
 /*Menu nav y logo*/
 
 
-
-
-#navMenu{
-    z-index: 999;
-    width: 100%;
-    display: grid;
-    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
-    grid-template-columns: 100px 20% 20% 20% 20%;
-    grid-template-rows: 100px;
-    grid-template-areas: "Logo Acerca Redes Compras Contacto";
-    justify-content: space-evenly;
-    align-items: center;
-    list-style-type: none;
-    position: fixed;
-    text-align: center;
-}
-li:hover{
-    transform: scale(1.5,1.5);
-}
-.logo{
-    grid-area: Logo;
+.navbar-brand{
+    width: 15%;
     animation-name: logo;
     animation-duration: 6s;
     animation-iteration-count: infinite;
 }
+
 @keyframes logo{
   from {
-    transform: rotateY(0deg)
+    transform: rotatex(0deg)
   }
   to{
-    transform: rotateY(360deg)
+    transform: rotateX(360deg)
   }
 }
-.optUno{
-    grid-area: Acerca;
-    width: 100%;
-}
-.optDos{
-    grid-area: Redes;
-    width: 100%;
-}
-.optTres{
-    grid-area: Compras;
-    width: 100%;
-}
-.optCuatro{
-    grid-area: Contacto;
-    width: 100%;
+#logo{
+    width: 70px;
+    height: 70px;
 }
 img{
     width: 100%;
 }
 #aM{
-    text-decoration: none;
     font-size: 20px;
-    font-style: italic;
-    color: white;
 }
-
-
-
 /*Grilla de imagenes*/
 
 
@@ -280,27 +244,39 @@ img{
 
 
 /*Pie de Pagina*/
-
-
-
-footer{  
+footer{ 
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 150px 60px ;
+    grid-template-rows: 120px  120px 50px;
+    grid-template-areas: "Marca"
+                         "redes"
+                         "bF";
     background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
     width: 100%;
-}
-#barraFooter{
-    display: grid;
-    grid-template-areas: "yo fa in tw derechos";   
-    grid-template-columns: 50px 50px 50px 50px 600px;
-    grid-template-rows: 50px;
-    height: 50px;
-    justify-content: space-around;
+    height: 300px;
+    justify-content: center;
     align-items: center;
-    color: white;
-    text-decoration: underline white;
 }
-.derechos{
-    font-size: 15px;
-    grid-area: derechos;
+.marca{
+    padding-top: 30px;
+    grid-area: Marca;
+    width: 120px;
+    height: 120px;
+}
+#breadFooter{
+    grid-area: bF;
+}
+#redes{
+    padding-top: 20px;
+    grid-area: redes;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: 50px;
+    grid-template-areas: "in yo fb tw";
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 30px;
 }
 .iN{
     grid-area: in;
@@ -313,57 +289,354 @@ footer{
 }
 .tC{
     grid-area: tw;
-}
-
-
+} 
 
 
 
 /*Ajustes de margenes Dispositivos "telefonos"*/
 
+/* small devices (tablets, 548px and up)*/
+@media only screen and (min-width: 548px) {
+    #aM{
+        font-size: 13px;
+    }
+
+    .sec1{
+        row-gap: 30px;
+        height: 600px;
+        justify-content: center;
+        align-items:center;
+        width: 70%;
+        grid-template-columns: 250px;
+        grid-template-rows:  50px 20px 150px 20px 150px;
+        grid-template-areas:  "sT1" 
+                              "b3"
+                              "wZ"
+                              "b5"
+                              "rE";
+    }
+    .sT1{
+        font-size: 20px;
+    }
+    .b3{
+        font-size: 15px;
+    }
+    .b5{
+        font-size: 15px;
+    }
+    .sec2{
+        margin-top: 700px;
+        row-gap: 30px;
+        height: 1300px;
+        justify-content: center;
+        align-items:center;
+        width: 70%;
+        grid-template-columns: 250px;
+        grid-template-rows:  50px 20px 150px 20px 150px 20px 150px 20px 150px 20px 150px;
+        grid-template-areas:   "sT2" 
+                                "c3"  
+                                "dO"
+                                "c4"
+                                "sC"
+                                "c5"
+                                "wC"
+                                "c6"  
+                                "aOE"
+                                "c8"
+                                "hR";
+    }
+    .sT2{
+        font-size: 20px;
+    }
+    .c3{
+        font-size: 15px;
+    }
+    .c4{
+        font-size: 15px;
+    }
+    .c5{
+        font-size: 15px;
+    }
+    .c6{
+        font-size: 15px;
+    }
+    .c8{
+        font-size: 15px;
+    }
+
+    footer{ 
+        margin-top: 200px;
+        grid-template-columns: 150px;
+        grid-template-rows: 90px 30px 30px;
+        width: 100%;
+        height: 240px;
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+    .marca{
+        width: 90px;
+        height: 90px;
+    }
+    #redes{
+        grid-template-columns: 30px 30px 30px 30px;
+        grid-template-rows: 30px;
+    }
+
+ }
+
+/* Medium devices (tablets, 768px and up)*/
+@media only screen and (min-width: 768px) {
+    #aM{
+        font-size: 17px;
+    }
+    .sec1{
+        row-gap: 30px;
+        height: 650px;
+        justify-content: center;
+        align-items:center;
+        width: 70%;
+        grid-template-columns: 350px;
+        grid-template-rows:  50px 20px 180px 20px 180px;
+        grid-template-areas:  "sT1" 
+                              "b3"
+                              "wZ"
+                              "b5"
+                              "rE";
+    }
+    .sT1{
+        font-size: 23px;
+    }
+    .b3{
+        font-size: 18px;
+    }
+    .b5{
+        font-size: 18px;
+    }
+    .sec2{
+        margin-top: 700px;
+        row-gap: 30px;
+        height: 1400px;
+        justify-content: center;
+        align-items:center;
+        width: 70%;
+        grid-template-columns: 350px;
+        grid-template-rows:  50px 20px 175px 20px 175px 20px 175px 20px 175px 20px 175px;
+        grid-template-areas:   "sT2" 
+                                "c3"  
+                                "dO"
+                                "c4"
+                                "sC"
+                                "c5"
+                                "wC"
+                                "c6"  
+                                "aOE"
+                                "c8"
+                                "hR";
+    }
+    .sT2{
+        font-size: 23px;
+    }
+    .c3{
+        font-size: 18px;
+    }
+    .c4{
+        font-size: 18px;
+    }
+    .c5{
+        font-size: 18px;
+    }
+    .c6{
+        font-size: 18px;
+    }
+    .c8{
+        font-size: 18px;
+    }
+
+    footer{ 
+        padding-top: 10px;
+        grid-template-columns: 150px;
+        grid-template-rows: 90px  30px 30px;
+        height: 230px;
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+    .marca{
+        width: 100px;
+        height: 100px;
+    }
+    #redes{
+        grid-template-columns: 35px 35px 35px 35px;
+        grid-template-rows: 35px;
+    }
+ }
+/* Large devices (desktops)*/
+@media only screen and (min-width: 992px) {
+    #aM{
+        font-size: 17px;
+    }
+    .sec1{
+        margin-top: 400px;
+        row-gap: 80px;
+        height: 900px;
+        justify-content: center;
+        align-items:center;
+        width: 70%;
+        grid-template-columns: 500px;
+        grid-template-rows:  50px 20px 200px 20px 200px;
+        grid-template-areas:  "sT1" 
+                              "b3"
+                              "wZ"
+                              "b5"
+                              "rE";
+    }
+    .sT1{
+        font-size: 25px;
+    }
+    .b3{
+        font-size: 20px;
+    }
+    .b5{
+        font-size: 20px;
+    }
+    .sec2{
+        margin-top: 1900px;
+        row-gap: 70px;
+        height: 2000px;
+        justify-content: center;
+        align-items:center;
+        width: 70%;
+        grid-template-columns: 500px;
+        grid-template-rows:  50px 20px 200px 20px 200px 20px 200px 20px 200px 20px 200px;
+        grid-template-areas:   "sT2" 
+                                "c3"  
+                                "dO"
+                                "c4"
+                                "sC"
+                                "c5"
+                                "wC"
+                                "c6"  
+                                "aOE"
+                                "c8"
+                                "hR";
+    }
+    .sT2{
+        font-size: 25px;
+    }
+    .c3{
+        font-size: 20px;
+    }
+    .c4{
+        font-size: 20px;
+    }
+    .c5{
+        font-size: 20px;
+    }
+    .c6{
+        font-size: 20px;
+    }
+    .c8{
+        font-size: 20px;
+    }
+    footer{ 
+        margin-top: 1200px;
+        padding-top: 20px;
+        grid-template-columns: 150px;
+        grid-template-rows: 90px  30px 30px;
+        height: 260px;
+        column-gap: 27px;
+        row-gap: 27px;
+    }
+    .marca{
+        width: 110px;
+        height: 110px;
+    }
+    #redes{
+        grid-template-columns: 37px 37px 37px 37px;
+        grid-template-rows: 37px;
+    }
+ }
+/* Extra large devices (large desktops)*/
+@media only screen and (min-width: 1200px) {
+    #aM{
+        font-size: 20px;
+    }
+
+    .sec1{
+        height: 450px;
+        width: 1500px;
+        grid-template-columns: 400px 150px 400px ;
+        grid-template-rows: 50px 50px 250px ;
+        grid-template-areas:  "b1 sT1 b2" 
+                              "b3 b4 b5"
+                              "wZ b6 rE";
+        row-gap: 10px;
+        column-gap: 10px;
+        justify-content: space-evenly;   
+    }
+    .sT1{
+        font-size: 30px;
+    }
+    .b3{
+        font-size: 25px;
+    }
+    .b5{
+        font-size: 25px;
+    }
+    .sec2{
+        margin-top: 500px;
+        height: 900px;
+        width: 1500px;
+        background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
+        display: grid;
+        grid-template-columns: 400px 400px 400px;
+        grid-template-rows: 150px 50px 300px 50px 300px;
+        grid-template-areas:  "c1 sT2 c2" 
+                              "c3 c4 c5"
+                              "dO sC wC"
+                              "c6 c7 c8"
+                              "aOE b9 hR";
+        row-gap: 10px;
+        column-gap: 10px; 
+        justify-content: center;
+        align-content: center;  
+    }
+    .sT2{
+        font-size: 30px;
+    }
+    .c3{
+        font-size: 25px;
+    }
+    .c4{
+        font-size: 25px;
+    }
+    .c5{
+        font-size: 25px;
+    }
+    .c6{
+        font-size: 25px;
+    }
+    .c8{
+        font-size: 25px;
+    }
+
+    footer{ 
+        margin-top: 100px;
+        padding-top: 30px;
+        grid-template-columns: 150px;
+        grid-template-rows: 120px  30px 30px;
+        width: 100%;
+        height: 300px;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    .marca{
+        width: 120px;
+        height: 120px;
+    }
+    #redes{
+        grid-template-columns: 40px 40px 40px 40px;
+        grid-template-rows: 40px;
+    }
+ }
 
 
-@media only screen and (max-width: 600px){
-#aM{
-    font-size: 13px;
-}
-.sec1{
-    height: 500px;
-    justify-content: center;
-    align-items:center;
-    width: 50%;
-    grid-template-columns: 60%;
-    grid-template-rows:  50px 50px 150px 50px 150px;
-    grid-template-areas:  "sT1" 
-                          "b3"
-                          "wZ"
-                          "b5"
-                          "rE";
-}
-.sT1{
-    font-size: 15px;
-}
-.b3{
-    font-size: 10px;
-}
-.b5{
-    font-size: 10px;
-}
-.sec2{
-    display:none
-}
-#barraFooter{
-    display: grid;
-    grid-template-areas: "yo fa in tw derechos";   
-    grid-template-columns: 25px 25px 25px 25px 150px;
-    grid-template-rows: 50px;
-    height: 50px;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    text-decoration: underline white;
-}
-.derechos{
-    font-size: 9px;
-}
-}
