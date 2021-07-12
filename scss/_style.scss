@@ -554,14 +554,7 @@ img{
     justify-content: center;
     align-items: center;
     #carouselExampleSlidesOnly{
-        grid-area: carousel;
+        grid-area: carousel;}
     }
-    /*media query de una parte del carousel que me quedaba muy abajo*/
-    @media only screen and (min-width: 768px){
-    
-        .grid-Carousel{
-            align-items: initial;
-        }
-    }
-}
-
+/*MediaQuerys*/
+@import "scss/media.scss";
