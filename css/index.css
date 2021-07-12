@@ -1,0 +1,249 @@
+/*Cuerpo de pagina */  
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: url(../img/fondo.jpg) no-repeat center center fixed;
+    background-size: cover;  
+}
+
+
+
+/*Menu nav y logo*/
+
+
+.navbar-brand{
+    width: 15%;
+    animation-name: logo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes logo{
+  from {
+    transform: rotatex(0deg)
+  }
+  to{
+    transform: rotateX(360deg)
+  }
+}
+#logo{
+    width: 70px;
+    height: 70px;
+}
+img{
+    width: 100%;
+}
+#aM{
+    font-size: 20px;
+}
+/*Video Promocional*/
+#presentacion{
+    display: flex;
+    justify-content: center;
+}
+
+video{
+    margin-top: 200px;
+    margin-bottom: 200px;
+    width: 640px;
+    height: 480px;
+}
+/*Acerca*/
+
+#acerca{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.reseña{
+    width: 70%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.808);
+    font-size: 30px;
+    
+    line-height: 1.3;
+    border: solid rgba(0, 0, 0, 0.411);
+    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
+}
+
+/*Pie de Pagina*/
+footer{ 
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 150px;
+    grid-template-rows: 120px  120px 50px;
+    grid-template-areas: "Marca"
+                         "redes"
+                         "bF";
+    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+.marca{
+    padding-top: 30px;
+    grid-area: Marca;
+    width: 120px;
+    height: 120px;
+}
+#breadFooter{
+    grid-area: bF;
+}
+#redes{
+    padding-top: 20px;
+    grid-area: redes;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: 50px;
+    grid-template-areas: "in yo fb tw";
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 30px;
+}
+.iN{
+    grid-area: in;
+}
+.yT{
+    grid-area: yo;
+}
+.fB{
+    grid-area: fa;
+}
+.tC{
+    grid-area: tw;
+} 
+
+
+
+/* small devices (tablets, 548px and up)*/
+@media only screen and (min-width: 548px) {
+    #aM{
+        font-size: 13px;
+    }
+    video{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 500px;
+        height: 400px;
+    }
+    .reseña{
+        font-size: 15px;
+        line-height: 1.1;
+    }
+    footer{ 
+        grid-template-columns: 120px;
+        grid-template-rows: 90px  30px 30px;
+        width: 100%;
+        height: 200px;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    .marca{
+        width: 90px;
+        height: 90px;
+    }
+    #redes{
+        grid-template-columns: 30px 30px 30px 30px;
+        grid-template-rows: 30px;
+    }
+
+ }
+
+/* Medium devices (tablets, 768px and up)*/
+@media only screen and (min-width: 768px) {
+    #aM{
+        font-size: 17px;
+    }
+    video{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 640px;
+        height: 480px;
+    }
+    .reseña{
+        font-size: 17px;
+        line-height: 1.2;
+    }
+    footer{ 
+        padding-top: 10px;
+        grid-template-columns: 120px;
+        grid-template-rows: 90px  30px 30px;
+        height: 230px;
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+    .marca{
+        width: 100px;
+        height: 100px;
+    }
+    #redes{
+        grid-template-columns: 35px 35px 35px 35px;
+        grid-template-rows: 35px;
+    }
+ }
+/* Large devices (desktops)*/
+@media only screen and (min-width: 992px) {
+    #aM{
+        font-size: 17px;
+    }
+    video{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 640px;
+        height: 480px;
+    }
+    .reseña{
+        font-size: 25px;
+        line-height: 1.3;
+    }
+    footer{ 
+        padding-top: 20px;
+        grid-template-columns: 120px;
+        grid-template-rows: 90px  30px 30px;
+        height: 260px;
+        column-gap: 27px;
+        row-gap: 27px;
+    }
+    .marca{
+        width: 110px;
+        height: 110px;
+    }
+    #redes{
+        grid-template-columns: 37px 37px 37px 37px;
+        grid-template-rows: 37px;
+    }
+ }
+
+/* Extra large devices (large desktops)*/
+@media only screen and (min-width: 1200px) {
+    #aM{
+        font-size: 20px;
+    }
+
+    .reseña{
+        font-size: 30px;
+        line-height: 1.3;
+    }
+    footer{ 
+        padding-top: 30px;
+        grid-template-columns: 120px;
+        grid-template-rows: 120px  30px 30px;
+        width: 100%;
+        height: 300px;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    .marca{
+        width: 120px;
+        height: 120px;
+    }
+    #redes{
+        grid-template-columns: 40px 40px 40px 40px;
+        grid-template-rows: 40px;
+    }
+}
