@@ -33,6 +33,41 @@
           font-size: 20px;
       }
 }
+
+/*Index*/
+/*Video Promocional*/
+
+#acerca{
+    margin-top: 300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 640px 400px;
+    grid-template-rows: 500px;
+    grid-template-areas: "video resena";
+    background-color: rgb(28, 28, 32);
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    .video{
+        grid-area: video;
+        
+    }
+    iframe{
+        width: 640px;
+        height: 480px;
+    }
+
+    .reseña{
+        grid-area: resena;
+    p{
+        text-align: justify;
+        color: rgba(255, 255, 255, 0.808);
+        font-size: 20px;
+        line-height: 1.3;
+    }
+}
+
+}
 /*Pie de Pagina*/
 footer{ 
     margin-top: 500px;
@@ -42,7 +77,7 @@ footer{
     grid-template-areas: "Marca"
                          "redes"
                          "bF";
-    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
+    background-color: rgb(28, 28, 32);
     width: 100%;
     height: 300px;
     justify-content: center;
@@ -84,36 +119,6 @@ img{
 }
 }
 
-/*Index*/
-/*Video Promocional*/
-#presentacion{
-    display: flex;
-    justify-content: center;
-    video{
-        margin-top: 200px;
-        margin-bottom: 200px;
-        width: 640px;
-        height: 640px;
-    }
-}
-/*Acerca*/
-#acerca{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    .reseña{
-        width: 70%;
-        text-align: center;
-        color: rgba(255, 255, 255, 0.808);
-        font-size: 30px;
-        line-height: 1.3;
-        border: solid rgba(0, 0, 0, 0.411);
-        background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(10, 10, 10, 0.884));
-    }
-}
-
-
-
 
 /*Compras*/
 /*Grilla Indumentaria*/
@@ -121,218 +126,88 @@ img{
     padding-top: 200px;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 500px 500px 500px;
+    grid-template-rows: 800px 800px 800px;
     row-gap: 0px;
-    select{
-        background-color: rgba(0, 0, 0, 0.774);
-        color: white;
-    }
-    input{
-        background-color: rgba(0, 0, 0, 0.774);
-        text-align: center;
-        color: white;
-    }
     img{
         width: 100%;
+    }
+    .card-img-top:hover{
+        transform: scale(1.1,1.1);
+        transition: 1s;
     }
     /*Remeras*/
     .remeras{
         display: grid;
         justify-content: center; 
-        grid-template-columns: 300px 300px;
-        grid-template-rows: 50px 350px 30px 30px;
-        grid-template-areas: "TR TR"
-                             "RH RM"
-                             "SRH SRM"
-                             "IRH IRM";
-        column-gap: 300px;
+        grid-template-columns: 311px 311px;
+        grid-template-rows: 568px;
+        grid-template-areas:"RH RM";
         row-gap: 30px;
-        .tituloRemeras{
-            grid-area: TR;
-            justify-self: center;
-            text-align: center;
-            align-self: center;
+        .card-body{
+            background-color: rgba(32, 32, 32, 0.87);
+        }
+        .card{
+            background-color: transparent;
             color: white;
-            width: 800px;
-            background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
         }
-        .rH{
+        #rH{
             grid-area: RH;
-            height: 350px;
-            border: solid black 4px;
+            border: none;   
         }
-        .rH:hover{
-            transform: scale(1.5,1.5);
-            transition: 2s;
-        }
-        .srH{
-            grid-area: SRH;
-            width: 100px;
-            height: 20px;
-            justify-self: center;
-            align-self: flex-end;
-        }
-        .irH{
-            grid-area: IRH;
-            width: 100px;
-            height: 20px;
-            justify-self: center;
-        }
-        .rM{
+        #rM{
             grid-area: RM;
-            height: 350px;
-            border: solid black 4px;
-        }
-        .rM:hover{
-            transform: scale(1.5,1.5);
-            transition: 2s;
-        }
-        .srM{
-            grid-area: SRM;
-            width: 100px;
-            height: 20px;
-            justify-self: center;
-            align-self: flex-end;
-        }
-        .irM{
-            grid-area: IRM;
-            width: 100px;
-            height: 20px;
-            justify-self: center;
+            border: none;   
         }
     }
     /*Buzos*/
     .buzos{
     display: grid;
     justify-content: center; 
-    grid-template-columns: 300px 300px;
-    grid-template-rows:  50px 350px 30px 30px;
-    grid-template-areas: "TB TB"
-                        "BH BM"
-                        "SBH SBM"
-                        "IBH IBM";
-    column-gap: 300px;
+    grid-template-columns: 311px 311px;
+    grid-template-rows: 568px;
+    grid-template-areas: "BH BM";
     row-gap: 30px;
-    padding-top: 200px;
-    .tituloBuzos{
-        grid-area: TB;
-        justify-self: center;
-        text-align: center;
-        align-self: center;
+    }
+    .card-body{
+        background-color: rgba(32, 32, 32, 0.705);
+    }
+    .card{
+        background-color: transparent;
         color: white;
-        width: 800px;
-        background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
     }
-    .bH{
+
+   #bH{
         grid-area: BH;
-        height: 350px;
-        border: solid black 4px;
+        border: none; 
     }
-    .bH:hover{
-        transform: scale(1.5,1.5);
-        transition: 2s;
-    }
-    .sbH{
-        grid-area: SBH;
-        width: 100px;
-        height: 20px;
-        justify-self: center;
-        align-self: flex-end;
-    }
-    .ibH{
-        grid-area: IBH;
-        width: 100px;
-        height: 20px;
-        justify-self: center;
-    }
-    .bM{
+   #bM{
         grid-area: BM;
-        height: 350px;
-        border: solid black 4px;
+        border: none;
     }
-    .bM:hover{
-        transform: scale(1.5,1.5);
-        transition: 2s;
-    }
-    .sbM{
-        grid-area: SBM;
-        width: 100px;
-        height: 20px;
-        justify-self: center;
-        align-self: flex-end;
-    }
-    .ibM{
-        grid-area: IBM;
-        width: 100px;
-        height: 20px;
-        justify-self: center;
-    }
-    }
+  
+    
     /*Gorras*/
     .gorras{
         display: grid;
         justify-content: center; 
-        grid-template-columns: 300px 300px;
-        grid-template-rows:  50px 350px 30px 30px;
-        grid-template-areas: "TG TG"
-                            "GH GM"
-                            "SGH SGM"
-                            "IGH IGM";
-        column-gap: 300px;
+        grid-template-columns: 311px 311px;
+        grid-template-rows: 568px;
+        grid-template-areas:"GH GM";
         row-gap: 30px;
-        padding-top: 300px;
-        .tituloGorras{
-            grid-area: TG;
-            justify-self: center;
-            text-align: center;
-            align-self: center;
+        .card-body{
+            background-color: rgba(32, 32, 32, 0.87);
+        }
+        .card{
+            background-color: transparent;
             color: white;
-            width: 800px;
-            background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884),rgba(0, 0, 0, 0.877));
         }
-        .gH{
+        #gH{
             grid-area: GH;
-            height: 350px;
-            border: solid black 4px;
+            border: none; 
         }
-        .gH:hover{
-            transform: scale(1.5,1.5);
-            transition: 2s;
-        }
-        .sgH{
-            grid-area: SGH;
-            width: 100px;
-            height: 20px;
-            justify-self: center;
-            align-self: flex-end;
-        }
-        .igH{
-            grid-area: IGH;
-            width: 100px;
-            height: 20px;
-            justify-self: center;
-        }
-        .gM{
+        #gM{
             grid-area: GM;
-            height: 350px;
-            border: solid black 4px;
-        }
-        .gM:hover{
-            transform: scale(1.5,1.5);
-            transition: 2s;
-        }
-        .sgM{
-            grid-area: SGM;
-            width: 100px;
-            height: 20px;
-            justify-self: center;
-            align-self: flex-end;
-        }
-        .igM{
-            grid-area: IGM;
-            width: 100px;
-            height: 20px;
-            justify-self: center;
+            border: none; 
         }
     }
 }
@@ -344,9 +219,11 @@ img{
     padding-top: 40px;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 700px 800px 500px;
+    grid-template-rows: 700px 800px;
     justify-items: center;
     align-items: center;
+    grid-template-areas: "sec1"
+                         "sec2";
     @mixin juegos ($ancho, $fondo, $alto, $grilla, $columna, $filas, $rowG, $ColumG, $justify, $areas){
         width: $ancho;
         background-color: $fondo;
@@ -354,169 +231,101 @@ img{
         display: $grilla;
         grid-template-columns: $columna;
         grid-template-rows: $filas;
-        grid-template-areas: $areas;
         row-gap: $rowG;
         column-gap: $ColumG;
-        justify-content: $justify
-        
+        justify-content: $justify;
+        grid-template-areas: $areas;
+    }
+    .img-fluid:hover{
+        transform: scale(1.1,1.1);
+        transition: 1s;
+
     }
     /*seccion 1*/
 
     .sec1{
-        @include juegos(1500px, rgba(0, 0, 0, 0.774), 450px, grid, 400px 150px 400px, 50px 50px 250px, 10px, 10px, space-evenly, "b1 sT1 b2" 
-                                                                                                                                   "b3 b4 b5"
-                                                                                                                                   "wZ b6 rE");
-        .sT1{
+        @include juegos(1000px, rgb(28, 28, 32), 550px, grid, 350px, 120px 200px 200px, 10px, 10px, space-evenly, "titulo1"
+                                                                                                                    "wZ" 
+                                                                                                                    "rE");
+        grid-area: sec1;
         
-            grid-area: sT1;
-            text-align: center;
-            
-            font-size: 30px;
-            color: white;
-            text-decoration: underline white;  
+        
+        .titulo1{
+            color: rgb(190, 190, 190);
+            grid-area: titulo1;
+            align-self: center;
+            justify-self: center;
+    
         }
-        .wZ{
+        #wZ{
+            min-width: 900px;
             grid-area: wZ;
-        }
-        .wZ:hover{
-            transform: scale(1.5,1.5);
-            transition: 2s;
-        }
-        .rE{
-            grid-area: rE;  
-        }
-        .rE:hover{
-            transform: scale(1.5,1.5);
-            transition: 2s;
-        }
-        .b1{
-            grid-area: b1;
-        }
-        .b2{
-            grid-area: b2;
-        }
-        .b3{  
-            grid-area: b3;
-            color: white;
-            text-decoration: underline white;
-            font-size: 25px;
+            align-self: center;
             justify-self: center;
         }
-        .b4{
-            grid-area: b4;
+        #rE{
+            min-width: 900px;
+            grid-area: rE;  
+            align-self: center;
+            justify-self: center;
         }
-        .b5{
-            grid-area: b5;
-            color: white;
-            text-decoration: underline white;
-            font-size: 25px;
-            justify-self: center; 
-        }
-        .b6{
-            grid-area: b6;
-        }
+     
         img{
             width: 100%;
         }
     }
     /*seccion 2*/
     .sec2{
-        @include juegos(1500px, rgba(0, 0, 0, 0.774), 900px, grid, 400px 400px 400px, 150px 50px 300px 50px 300px, 10px, 30px, center, "c1 sT2 c2" 
-                                                                                                                                         "c3 c4 c5"
-                                                                                                                                         "dO sC wC"
-                                                                                                                                         "c6 c7 c8"
-                                                                                                                                         "aOE b9 hR");
+        @include juegos(1000px, rgb(28, 28, 32), 1000px, grid, 350px, 120px 150px 150px 150px 150px 150px, 10px, 30px, center,  "titulo2"  
+                                                                                                                                   "dO" 
+                                                                                                                                   "sC"
+                                                                                                                                   "wC"
+                                                                                                                                   "aOE"
+                                                                                                                                   "hR");
+        grid-area: sec2;
 
-        .sT2{
-            grid-area: sT2;
-            text-align: center;
-            color: white;
-            text-decoration: underline white;
-            font-size: 30px;
-              
+        .titulo2{
+            color: rgb(190, 190, 190);
+            grid-area: titulo2;
+            align-self: center;
+            justify-self: center;
+    
         }
-        .dO{
-            grid-area: dO; 
+        #dO{
+            min-width: 720px;
+            grid-area: dO;
+            align-self: center;
+            justify-self: center; 
         }
-        .dO:hover{
-            transform: scale(1.5,1.5);
-            transition: 2s;
-        }
-        .sC{
+
+        #sC{
+            min-width: 720px;
             grid-area: sC; 
+            align-self: center;
+            justify-self: center;
         }
-        .sC:hover{
-            transform: scale(1.5,1.5);
-            transition: 2s;
-        }
-        .wC{
+
+        #wC{
+            min-width: 720px;
             grid-area: wC; 
+            align-self: center;
+            justify-self: center;
         }
-        .wC:hover{
-            transform: scale(1.5,1.5);
-            transition: 2s;
-        }
-        .aOE{
+
+        #aOE{
+            min-width: 720px;
             grid-area: aOE; 
+            align-self: center;
+            justify-self: center;
         }
-        .aOE:hover{
-            transform: scale(1.5,1.5);
-            transition: 2s;
-        }
-        .hR{
+
+        #hR{
+            min-width: 720px;
             grid-area: hR; 
-        }
-        .hR:hover{
-            transform: scale(1.5,1.5);
-            transition: 2s;
-        }
-        .c1{
-            grid-area: c1; 
-        }
-        .c2{
-            grid-area: c2; 
-        }
-        .c3{
-            grid-area: c3;
-            color: white;
-            text-decoration: underline white;
-            font-size: 25px;
+            align-self: center;
             justify-self: center;
         }
-        .c4{
-            grid-area: c4;
-            color: white;
-            text-decoration: underline white;
-            font-size: 25px;;
-            justify-self: center; 
-        }
-        .c5{
-            grid-area: c5;
-            color: white;
-            text-decoration: underline white;
-            font-size: 25px;
-            justify-self: center; 
-        }
-        .c6{
-            grid-area: c6;
-            color: white;
-            text-decoration: underline white;
-            font-size: 25px;
-            justify-self: center;
-        }
-        .c7{
-            grid-area: c7; 
-        }
-        .c8{
-            grid-area: c8;
-            color: white;
-            text-decoration: underline white;
-            font-size: 25px;
-            justify-self: center; 
-        }
-        .c9{
-            grid-area: c9; 
-        } 
+
         img{
             width: 100%;
         }
@@ -528,33 +337,32 @@ img{
 /*Contacto*/
 /*Seccion Formulario*/
 #contacto{
-    padding-top: 200px;
+    margin-top: 300px;
     width: 100%;
     display: grid;
-    grid-template-columns:  300px ;
+    background-color: rgb(28, 28, 32);
+    grid-template-columns:  300px 500px ;
     grid-template-rows: 300px ;
-    grid-template-areas: "form form form";
-    justify-content: space-evenly;
-    column-gap: 20px;
+    grid-template-areas: "form form sponsors";
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 40px;
     row-gap: 100px;
-    margin-bottom: 200px;
     #form{
         grid-area: form;
+        padding-right: 10px;
+        border-right: 2px solid rgba(0, 0, 0, 0.568);
     }
     #textColor{
         color: white;
     }
-}
-/*spornsors*/
-.grid-Carousel{
-    display: grid;
-    grid-template-columns: 400px;
-    grid-template-rows: 400px;
-    grid-template-areas: "carousel";
-    justify-content: center;
-    align-items: center;
+    /*spornsors*/
+    .grid-Carousel{
+        grid-area: sponsors;
     #carouselExampleSlidesOnly{
         grid-area: carousel;}
     }
+}
+
 /*MediaQuerys*/
-@import "scss/media.scss";
+@import "../scss/media.scss";

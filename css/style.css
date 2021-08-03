@@ -27,6 +27,32 @@
   .navbar-brand #aM {
     font-size: 20px; }
 
+/*Index*/
+/*Video Promocional*/
+#acerca {
+  margin-top: 300px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 640px 400px;
+  grid-template-rows: 500px;
+  grid-template-areas: "video resena";
+  background-color: #1c1c20;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px; }
+  #acerca .video {
+    grid-area: video; }
+  #acerca iframe {
+    width: 640px;
+    height: 480px; }
+  #acerca .reseña {
+    grid-area: resena; }
+    #acerca .reseña p {
+      text-align: justify;
+      color: rgba(255, 255, 255, 0.808);
+      font-size: 20px;
+      line-height: 1.3; }
+
 /*Pie de Pagina*/
 footer {
   margin-top: 500px;
@@ -34,7 +60,7 @@ footer {
   grid-template-columns: 150px 60px;
   grid-template-rows: 120px  120px 50px;
   grid-template-areas: "Marca" "redes" "bF";
-  background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884), rgba(10, 10, 10, 0.884));
+  background-color: #1c1c20;
   width: 100%;
   height: 300px;
   justify-content: center;
@@ -67,209 +93,76 @@ footer {
   footer img {
     width: 100%; }
 
-/*Index*/
-/*Video Promocional*/
-#presentacion {
-  display: flex;
-  justify-content: center; }
-  #presentacion video {
-    margin-top: 200px;
-    margin-bottom: 200px;
-    width: 640px;
-    height: 640px; }
-
-/*Acerca*/
-#acerca {
-  display: flex;
-  justify-content: center;
-  align-content: center; }
-  #acerca .reseña {
-    width: 70%;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.808);
-    font-size: 30px;
-    line-height: 1.3;
-    border: solid rgba(0, 0, 0, 0.411);
-    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884), rgba(10, 10, 10, 0.884)); }
-
 /*Compras*/
 /*Grilla Indumentaria*/
 #grillaIndu {
   padding-top: 200px;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 500px 500px 500px;
+  grid-template-rows: 800px 800px 800px;
   row-gap: 0px;
   /*Remeras*/
   /*Buzos*/
   /*Gorras*/ }
-  #grillaIndu select {
-    background-color: rgba(0, 0, 0, 0.774);
-    color: white; }
-  #grillaIndu input {
-    background-color: rgba(0, 0, 0, 0.774);
-    text-align: center;
-    color: white; }
   #grillaIndu img {
     width: 100%; }
+  #grillaIndu .card-img-top:hover {
+    transform: scale(1.1, 1.1);
+    transition: 1s; }
   #grillaIndu .remeras {
     display: grid;
     justify-content: center;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 50px 350px 30px 30px;
-    grid-template-areas: "TR TR" "RH RM" "SRH SRM" "IRH IRM";
-    column-gap: 300px;
+    grid-template-columns: 311px 311px;
+    grid-template-rows: 568px;
+    grid-template-areas: "RH RM";
     row-gap: 30px; }
-    #grillaIndu .remeras .tituloRemeras {
-      grid-area: TR;
-      justify-self: center;
-      text-align: center;
-      align-self: center;
-      color: white;
-      width: 800px;
-      background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884), rgba(0, 0, 0, 0.877)); }
-    #grillaIndu .remeras .rH {
+    #grillaIndu .remeras .card-body {
+      background-color: rgba(32, 32, 32, 0.87); }
+    #grillaIndu .remeras .card {
+      background-color: transparent;
+      color: white; }
+    #grillaIndu .remeras #rH {
       grid-area: RH;
-      height: 350px;
-      border: solid black 4px; }
-    #grillaIndu .remeras .rH:hover {
-      transform: scale(1.5, 1.5);
-      transition: 2s; }
-    #grillaIndu .remeras .srH {
-      grid-area: SRH;
-      width: 100px;
-      height: 20px;
-      justify-self: center;
-      align-self: flex-end; }
-    #grillaIndu .remeras .irH {
-      grid-area: IRH;
-      width: 100px;
-      height: 20px;
-      justify-self: center; }
-    #grillaIndu .remeras .rM {
+      border: none; }
+    #grillaIndu .remeras #rM {
       grid-area: RM;
-      height: 350px;
-      border: solid black 4px; }
-    #grillaIndu .remeras .rM:hover {
-      transform: scale(1.5, 1.5);
-      transition: 2s; }
-    #grillaIndu .remeras .srM {
-      grid-area: SRM;
-      width: 100px;
-      height: 20px;
-      justify-self: center;
-      align-self: flex-end; }
-    #grillaIndu .remeras .irM {
-      grid-area: IRM;
-      width: 100px;
-      height: 20px;
-      justify-self: center; }
+      border: none; }
   #grillaIndu .buzos {
     display: grid;
     justify-content: center;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 50px 350px 30px 30px;
-    grid-template-areas: "TB TB" "BH BM" "SBH SBM" "IBH IBM";
-    column-gap: 300px;
-    row-gap: 30px;
-    padding-top: 200px; }
-    #grillaIndu .buzos .tituloBuzos {
-      grid-area: TB;
-      justify-self: center;
-      text-align: center;
-      align-self: center;
-      color: white;
-      width: 800px;
-      background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884), rgba(0, 0, 0, 0.877)); }
-    #grillaIndu .buzos .bH {
-      grid-area: BH;
-      height: 350px;
-      border: solid black 4px; }
-    #grillaIndu .buzos .bH:hover {
-      transform: scale(1.5, 1.5);
-      transition: 2s; }
-    #grillaIndu .buzos .sbH {
-      grid-area: SBH;
-      width: 100px;
-      height: 20px;
-      justify-self: center;
-      align-self: flex-end; }
-    #grillaIndu .buzos .ibH {
-      grid-area: IBH;
-      width: 100px;
-      height: 20px;
-      justify-self: center; }
-    #grillaIndu .buzos .bM {
-      grid-area: BM;
-      height: 350px;
-      border: solid black 4px; }
-    #grillaIndu .buzos .bM:hover {
-      transform: scale(1.5, 1.5);
-      transition: 2s; }
-    #grillaIndu .buzos .sbM {
-      grid-area: SBM;
-      width: 100px;
-      height: 20px;
-      justify-self: center;
-      align-self: flex-end; }
-    #grillaIndu .buzos .ibM {
-      grid-area: IBM;
-      width: 100px;
-      height: 20px;
-      justify-self: center; }
+    grid-template-columns: 311px 311px;
+    grid-template-rows: 568px;
+    grid-template-areas: "BH BM";
+    row-gap: 30px; }
+  #grillaIndu .card-body {
+    background-color: rgba(32, 32, 32, 0.705); }
+  #grillaIndu .card {
+    background-color: transparent;
+    color: white; }
+  #grillaIndu #bH {
+    grid-area: BH;
+    border: none; }
+  #grillaIndu #bM {
+    grid-area: BM;
+    border: none; }
   #grillaIndu .gorras {
     display: grid;
     justify-content: center;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 50px 350px 30px 30px;
-    grid-template-areas: "TG TG" "GH GM" "SGH SGM" "IGH IGM";
-    column-gap: 300px;
-    row-gap: 30px;
-    padding-top: 300px; }
-    #grillaIndu .gorras .tituloGorras {
-      grid-area: TG;
-      justify-self: center;
-      text-align: center;
-      align-self: center;
-      color: white;
-      width: 800px;
-      background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884), rgba(0, 0, 0, 0.877)); }
-    #grillaIndu .gorras .gH {
+    grid-template-columns: 311px 311px;
+    grid-template-rows: 568px;
+    grid-template-areas: "GH GM";
+    row-gap: 30px; }
+    #grillaIndu .gorras .card-body {
+      background-color: rgba(32, 32, 32, 0.87); }
+    #grillaIndu .gorras .card {
+      background-color: transparent;
+      color: white; }
+    #grillaIndu .gorras #gH {
       grid-area: GH;
-      height: 350px;
-      border: solid black 4px; }
-    #grillaIndu .gorras .gH:hover {
-      transform: scale(1.5, 1.5);
-      transition: 2s; }
-    #grillaIndu .gorras .sgH {
-      grid-area: SGH;
-      width: 100px;
-      height: 20px;
-      justify-self: center;
-      align-self: flex-end; }
-    #grillaIndu .gorras .igH {
-      grid-area: IGH;
-      width: 100px;
-      height: 20px;
-      justify-self: center; }
-    #grillaIndu .gorras .gM {
+      border: none; }
+    #grillaIndu .gorras #gM {
       grid-area: GM;
-      height: 350px;
-      border: solid black 4px; }
-    #grillaIndu .gorras .gM:hover {
-      transform: scale(1.5, 1.5);
-      transition: 2s; }
-    #grillaIndu .gorras .sgM {
-      grid-area: SGM;
-      width: 100px;
-      height: 20px;
-      justify-self: center;
-      align-self: flex-end; }
-    #grillaIndu .gorras .igM {
-      grid-area: IGM;
-      width: 100px;
-      height: 20px;
-      justify-self: center; }
+      border: none; }
 
 /*Juegos*/
 /*Grilla de imagenes*/
@@ -277,243 +170,233 @@ footer {
   padding-top: 40px;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 700px 800px 500px;
+  grid-template-rows: 700px 800px;
   justify-items: center;
   align-items: center;
+  grid-template-areas: "sec1" "sec2";
   /*seccion 1*/
   /*seccion 2*/ }
+  #grilla .img-fluid:hover {
+    transform: scale(1.1, 1.1);
+    transition: 1s; }
   #grilla .sec1 {
-    width: 1500px;
-    background-color: rgba(0, 0, 0, 0.774);
-    height: 450px;
+    width: 1000px;
+    background-color: #1c1c20;
+    height: 550px;
     display: grid;
-    grid-template-columns: 400px 150px 400px;
-    grid-template-rows: 50px 50px 250px;
-    grid-template-areas: "b1 sT1 b2" "b3 b4 b5" "wZ b6 rE";
+    grid-template-columns: 350px;
+    grid-template-rows: 120px 200px 200px;
     row-gap: 10px;
     column-gap: 10px;
-    justify-content: space-evenly; }
-    #grilla .sec1 .sT1 {
-      grid-area: sT1;
-      text-align: center;
-      font-size: 30px;
-      color: white;
-      text-decoration: underline white; }
-    #grilla .sec1 .wZ {
-      grid-area: wZ; }
-    #grilla .sec1 .wZ:hover {
-      transform: scale(1.5, 1.5);
-      transition: 2s; }
-    #grilla .sec1 .rE {
-      grid-area: rE; }
-    #grilla .sec1 .rE:hover {
-      transform: scale(1.5, 1.5);
-      transition: 2s; }
-    #grilla .sec1 .b1 {
-      grid-area: b1; }
-    #grilla .sec1 .b2 {
-      grid-area: b2; }
-    #grilla .sec1 .b3 {
-      grid-area: b3;
-      color: white;
-      text-decoration: underline white;
-      font-size: 25px;
+    justify-content: space-evenly;
+    grid-template-areas: "titulo1" "wZ" "rE";
+    grid-area: sec1; }
+    #grilla .sec1 .titulo1 {
+      color: #bebebe;
+      grid-area: titulo1;
+      align-self: center;
       justify-self: center; }
-    #grilla .sec1 .b4 {
-      grid-area: b4; }
-    #grilla .sec1 .b5 {
-      grid-area: b5;
-      color: white;
-      text-decoration: underline white;
-      font-size: 25px;
+    #grilla .sec1 #wZ {
+      min-width: 900px;
+      grid-area: wZ;
+      align-self: center;
       justify-self: center; }
-    #grilla .sec1 .b6 {
-      grid-area: b6; }
+    #grilla .sec1 #rE {
+      min-width: 900px;
+      grid-area: rE;
+      align-self: center;
+      justify-self: center; }
     #grilla .sec1 img {
       width: 100%; }
   #grilla .sec2 {
-    width: 1500px;
-    background-color: rgba(0, 0, 0, 0.774);
-    height: 900px;
+    width: 1000px;
+    background-color: #1c1c20;
+    height: 1000px;
     display: grid;
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 150px 50px 300px 50px 300px;
-    grid-template-areas: "c1 sT2 c2" "c3 c4 c5" "dO sC wC" "c6 c7 c8" "aOE b9 hR";
+    grid-template-columns: 350px;
+    grid-template-rows: 120px 150px 150px 150px 150px 150px;
     row-gap: 10px;
     column-gap: 30px;
-    justify-content: center; }
-    #grilla .sec2 .sT2 {
-      grid-area: sT2;
-      text-align: center;
-      color: white;
-      text-decoration: underline white;
-      font-size: 30px; }
-    #grilla .sec2 .dO {
-      grid-area: dO; }
-    #grilla .sec2 .dO:hover {
-      transform: scale(1.5, 1.5);
-      transition: 2s; }
-    #grilla .sec2 .sC {
-      grid-area: sC; }
-    #grilla .sec2 .sC:hover {
-      transform: scale(1.5, 1.5);
-      transition: 2s; }
-    #grilla .sec2 .wC {
-      grid-area: wC; }
-    #grilla .sec2 .wC:hover {
-      transform: scale(1.5, 1.5);
-      transition: 2s; }
-    #grilla .sec2 .aOE {
-      grid-area: aOE; }
-    #grilla .sec2 .aOE:hover {
-      transform: scale(1.5, 1.5);
-      transition: 2s; }
-    #grilla .sec2 .hR {
-      grid-area: hR; }
-    #grilla .sec2 .hR:hover {
-      transform: scale(1.5, 1.5);
-      transition: 2s; }
-    #grilla .sec2 .c1 {
-      grid-area: c1; }
-    #grilla .sec2 .c2 {
-      grid-area: c2; }
-    #grilla .sec2 .c3 {
-      grid-area: c3;
-      color: white;
-      text-decoration: underline white;
-      font-size: 25px;
+    justify-content: center;
+    grid-template-areas: "titulo2" "dO" "sC" "wC" "aOE" "hR";
+    grid-area: sec2; }
+    #grilla .sec2 .titulo2 {
+      color: #bebebe;
+      grid-area: titulo2;
+      align-self: center;
       justify-self: center; }
-    #grilla .sec2 .c4 {
-      grid-area: c4;
-      color: white;
-      text-decoration: underline white;
-      font-size: 25px;
+    #grilla .sec2 #dO {
+      min-width: 720px;
+      grid-area: dO;
+      align-self: center;
       justify-self: center; }
-    #grilla .sec2 .c5 {
-      grid-area: c5;
-      color: white;
-      text-decoration: underline white;
-      font-size: 25px;
+    #grilla .sec2 #sC {
+      min-width: 720px;
+      grid-area: sC;
+      align-self: center;
       justify-self: center; }
-    #grilla .sec2 .c6 {
-      grid-area: c6;
-      color: white;
-      text-decoration: underline white;
-      font-size: 25px;
+    #grilla .sec2 #wC {
+      min-width: 720px;
+      grid-area: wC;
+      align-self: center;
       justify-self: center; }
-    #grilla .sec2 .c7 {
-      grid-area: c7; }
-    #grilla .sec2 .c8 {
-      grid-area: c8;
-      color: white;
-      text-decoration: underline white;
-      font-size: 25px;
+    #grilla .sec2 #aOE {
+      min-width: 720px;
+      grid-area: aOE;
+      align-self: center;
       justify-self: center; }
-    #grilla .sec2 .c9 {
-      grid-area: c9; }
+    #grilla .sec2 #hR {
+      min-width: 720px;
+      grid-area: hR;
+      align-self: center;
+      justify-self: center; }
     #grilla .sec2 img {
       width: 100%; }
 
 /*Contacto*/
 /*Seccion Formulario*/
 #contacto {
-  padding-top: 200px;
+  margin-top: 300px;
   width: 100%;
   display: grid;
-  grid-template-columns: 300px;
+  background-color: #1c1c20;
+  grid-template-columns: 300px 500px;
   grid-template-rows: 300px;
-  grid-template-areas: "form form form";
-  justify-content: space-evenly;
-  column-gap: 20px;
+  grid-template-areas: "form form sponsors";
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 40px;
   row-gap: 100px;
-  margin-bottom: 200px; }
+  /*spornsors*/ }
   #contacto #form {
-    grid-area: form; }
+    grid-area: form;
+    padding-right: 10px;
+    border-right: 2px solid rgba(0, 0, 0, 0.568); }
   #contacto #textColor {
     color: white; }
-
-/*spornsors*/
-.grid-Carousel {
-  display: grid;
-  grid-template-columns: 400px;
-  grid-template-rows: 400px;
-  grid-template-areas: "carousel";
-  justify-content: center;
-  align-items: center; }
-  .grid-Carousel #carouselExampleSlidesOnly {
-    grid-area: carousel; }
+  #contacto .grid-Carousel {
+    grid-area: sponsors; }
+    #contacto .grid-Carousel #carouselExampleSlidesOnly {
+      grid-area: carousel; }
 
 /*MediaQuerys*/
-/* small devices (tablets, 548px and up)*/
-@media only screen and (min-width: 548px) {
+/* small devices (tablets, 548px)*/
+@media only screen and (max-width: 548px) {
   .navbar-brand #aM {
     font-size: 13px; }
-  #presentacion video {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    width: 500px;
-    height: 400px; }
-  #acerca .reseña {
-    font-size: 15px;
-    line-height: 1.1; }
-  #grilla .sec1 {
-    row-gap: 30px;
-    height: 600px;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
+  #acerca {
     grid-template-columns: 250px;
-    grid-template-rows: 50px 20px 150px 20px 150px;
-    grid-template-areas: "sT1"  "b3" "wZ" "b5" "rE"; }
-  #grilla .sT1 {
-    font-size: 20px; }
-  #grilla .b3 {
-    font-size: 15px; }
-  #grilla .b5 {
-    font-size: 15px; }
-  #grilla .sec2 {
-    margin-top: 700px;
-    row-gap: 30px;
-    height: 1300px;
-    justify-content: center;
+    grid-template-rows: 280px;
+    grid-template-areas: "video"  "resena";
+    background-color: #1c1c20;
     align-items: center;
-    width: 70%;
-    grid-template-columns: 250px;
-    grid-template-rows: 50px 20px 150px 20px 150px 20px 150px 20px 150px 20px 150px;
-    grid-template-areas: "sT2"  "c3"   "dO" "c4" "sC" "c5" "wC" "c6"   "aOE" "c8" "hR"; }
-  #grilla .sT2 {
-    font-size: 20px; }
-  #grilla .c3 {
-    font-size: 15px; }
-  #grilla .c4 {
-    font-size: 15px; }
-  #grilla .c5 {
-    font-size: 15px; }
-  #grilla .c6 {
-    font-size: 15px; }
-  #grilla .c8 {
-    font-size: 15px; }
+    column-gap: 25px; }
+    #acerca iframe {
+      width: 250px;
+      height: 180px; }
+    #acerca .reseña p {
+      font-size: 12px;
+      line-height: 1.1; }
+  #grilla {
+    grid-template-columns: 100%;
+    grid-template-rows: 800px 1800px;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "sec1" "sec2";
+    /*seccion 1*/
+    /*seccion 2*/ }
+    #grilla .img-fluid:hover {
+      transform: scale(1.5, 1.5);
+      transition: 1s; }
+    #grilla .sec1 {
+      width: 100%;
+      background-color: #1c1c20;
+      height: 800px;
+      display: grid;
+      grid-template-columns: 30% 30%;
+      grid-template-rows: 120px 370px;
+      row-gap: 130px;
+      column-gap: 50px;
+      justify-content: center;
+      grid-template-areas: "titulo1 titulo1" "wZ rE"; }
+      #grilla .sec1 .titulo1 {
+        grid-area: titulo1; }
+      #grilla .sec1 #wZ {
+        grid-area: wZ;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec1 #rE {
+        min-width: 40px;
+        grid-area: rE;
+        font-size: 12px; }
+      #grilla .sec1 img {
+        width: 200px; }
+    #grilla .sec2 {
+      width: 100%;
+      background-color: #1c1c20;
+      height: 1500px;
+      display: grid;
+      grid-template-columns: 30% 30%;
+      grid-template-rows: 120px 370px 370px 370px;
+      row-gap: 50px;
+      column-gap: 50px;
+      justify-content: center;
+      grid-template-areas: "titulo2 titulo2" "dO sC" "wC aOE" "hR hR";
+      grid-area: sec2; }
+      #grilla .sec2 .titulo2 {
+        grid-area: titulo2; }
+      #grilla .sec2 #dO {
+        grid-area: dO;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 #sC {
+        grid-area: sC;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 #wC {
+        grid-area: wC;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 #aOE {
+        grid-area: aOE;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 #hR {
+        grid-area: hR;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 img {
+        width: 300px; }
   #grillaIndu {
-    grid-template-rows: 1600px 1600px 1600px;
+    grid-template-rows: 1400px 1400px 1400px;
     /*Remeras*/ }
     #grillaIndu .remeras {
       grid-template-columns: 311px;
-      grid-template-rows: 50px 568px 30px 30px 50px 568px 30px 30px;
-      grid-template-areas: "TR" "RH"  "SRH" "IRH" "RM" "SRM" "IRM";
+      grid-template-rows: 568px 568px;
+      grid-template-areas: "RH"  "RM";
       column-gap: 0px;
-      row-gap: 20px; }
+      row-gap: 150px; }
     #grillaIndu .buzos {
       grid-template-columns: 311px;
-      grid-template-rows: 50px 568px 30px 30px 50px 568px 30px 30px;
-      grid-template-areas: "TB" "BH" "SBH" "IBH" "BM" "SBM" "IBM";
+      grid-template-rows: 568px 568px;
+      grid-template-areas: "BH" "BM";
       column-gap: 0px;
-      row-gap: 20px; }
+      row-gap: 150px; }
     #grillaIndu .gorras {
       grid-template-columns: 311px;
-      grid-template-rows: 50px 568px 30px 30px 50px 568px 30px 30px;
-      grid-template-areas: "TG" "GH" "SGH"  "IGH"  "GM" "SGM" "IGM";
+      grid-template-rows: 568px 568px;
+      grid-template-areas: "GH" "GM";
       column-gap: 0px;
-      row-gap: 40px; }
+      row-gap: 150px; }
+  /*Contacto*/
+  /*Seccion Formulario*/
+  #contacto {
+    grid-template-columns: 60% 25%;
+    grid-template-rows: 200px;
+    height: 700px;
+    grid-template-areas: "form sponsors" "form sponsors";
+    justify-content: space-evenly;
+    align-items: center; }
   footer {
     grid-template-columns: 150px;
     grid-template-rows: 90px  30px 30px;
@@ -528,76 +411,256 @@ footer {
       grid-template-columns: 30px 30px 30px 30px;
       grid-template-rows: 30px; } }
 
+/* small devices (tablets, 548px and up)*/
+@media only screen and (min-width: 548px) {
+  .navbar-brand #aM {
+    font-size: 13px; }
+  #acerca {
+    grid-template-columns: 320px 200px;
+    grid-template-rows: 450px;
+    grid-template-areas: "video resena";
+    background-color: #1c1c20;
+    justify-content: space-evenly;
+    align-items: center; }
+    #acerca .video {
+      grid-area: video; }
+    #acerca iframe {
+      width: 320px;
+      height: 240px; }
+    #acerca .reseña {
+      grid-area: resena; }
+      #acerca .reseña p {
+        text-align: justify;
+        font-size: 15px;
+        line-height: 1.1; }
+  #grilla {
+    grid-template-columns: 100%;
+    grid-template-rows: 800px 1800px;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "sec1" "sec2";
+    /*seccion 1*/
+    /*seccion 2*/ }
+    #grilla .img-fluid:hover {
+      transform: scale(1.5, 1.5);
+      transition: 1s; }
+    #grilla .sec1 {
+      width: 100%;
+      background-color: #1c1c20;
+      height: 650px;
+      display: grid;
+      grid-template-columns: 30% 30%;
+      grid-template-rows: 120px 370px;
+      row-gap: 50px;
+      column-gap: 50px;
+      justify-content: center;
+      grid-template-areas: "titulo1 titulo1" "wZ rE"; }
+      #grilla .sec1 .titulo1 {
+        grid-area: titulo1; }
+      #grilla .sec1 #wZ {
+        grid-area: wZ;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec1 #rE {
+        min-width: 40px;
+        grid-area: rE;
+        font-size: 12px; }
+      #grilla .sec1 img {
+        width: 200px; }
+    #grilla .sec2 {
+      width: 100%;
+      background-color: #1c1c20;
+      height: 1500px;
+      display: grid;
+      grid-template-columns: 30% 30%;
+      grid-template-rows: 120px 370px 370px 370px;
+      row-gap: 50px;
+      column-gap: 50px;
+      justify-content: center;
+      grid-template-areas: "titulo2 titulo2" "dO sC" "wC aOE" "hR hR";
+      grid-area: sec2; }
+      #grilla .sec2 .titulo2 {
+        grid-area: titulo2; }
+      #grilla .sec2 #dO {
+        grid-area: dO;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 #sC {
+        grid-area: sC;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 #wC {
+        grid-area: wC;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 #aOE {
+        grid-area: aOE;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 #hR {
+        grid-area: hR;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 img {
+        width: 300px; }
+  #grillaIndu {
+    grid-template-rows: 1400px 1400px 1400px;
+    /*Remeras*/ }
+    #grillaIndu .remeras {
+      grid-template-columns: 311px;
+      grid-template-rows: 568px 568px;
+      grid-template-areas: "RH"  "RM";
+      column-gap: 0px;
+      row-gap: 150px; }
+    #grillaIndu .buzos {
+      grid-template-columns: 311px;
+      grid-template-rows: 568px 568px;
+      grid-template-areas: "BH" "BM";
+      column-gap: 0px;
+      row-gap: 150px; }
+    #grillaIndu .gorras {
+      grid-template-columns: 311px;
+      grid-template-rows: 568px 568px;
+      grid-template-areas: "GH" "GM";
+      column-gap: 0px;
+      row-gap: 150px; }
+  footer {
+    grid-template-columns: 150px;
+    grid-template-rows: 90px  30px 30px;
+    width: 100%;
+    height: 200px;
+    column-gap: 20px;
+    row-gap: 20px; }
+    footer .marca {
+      width: 90px;
+      height: 90px; }
+    footer #redes {
+      grid-template-columns: 30px 30px 30px 30px;
+      grid-template-rows: 30px; }
+  /*Contacto*/
+  /*Seccion Formulario*/
+  #contacto {
+    grid-template-columns: 250px 200px;
+    grid-template-rows: 200px;
+    grid-template-areas: "form sponsors" "form sponsors";
+    justify-content: space-around;
+    align-items: center; } }
+
 /* Medium devices (tablets, 768px and up)*/
 @media only screen and (min-width: 768px) {
   .navbar-brand #aM {
     font-size: 17px; }
-  #presentacion video {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    width: 640px;
-    height: 480px; }
-  #acerca .reseña {
-    font-size: 17px;
-    line-height: 1.2; }
-  #grilla .sec1 {
-    row-gap: 30px;
-    height: 650px;
-    justify-content: center;
+  #acerca {
+    grid-template-columns: 320px 250px;
+    grid-template-rows: 450px;
+    grid-template-areas: "video resena";
+    background-color: #1c1c20;
+    justify-content: space-evenly;
+    align-items: center; }
+    #acerca iframe {
+      width: 350px;
+      height: 250px; }
+    #acerca .reseña p {
+      text-align: justify;
+      font-size: 17px;
+      line-height: 1.1; }
+  #grilla {
+    grid-template-columns: 100%;
+    grid-template-rows: 800px 1800px;
+    justify-items: center;
     align-items: center;
-    width: 70%;
-    grid-template-columns: 350px;
-    grid-template-rows: 50px 20px 180px 20px 180px;
-    grid-template-areas: "sT1"  "b3" "wZ" "b5" "rE"; }
-  #grilla .sT1 {
-    font-size: 23px; }
-  #grilla .b3 {
-    font-size: 18px; }
-  #grilla .b5 {
-    font-size: 18px; }
-  #grilla .sec2 {
-    margin-top: 700px;
-    row-gap: 30px;
-    height: 1400px;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    grid-template-columns: 350px;
-    grid-template-rows: 50px 20px 175px 20px 175px 20px 175px 20px 175px 20px 175px;
-    grid-template-areas: "sT2"  "c3"   "dO" "c4" "sC" "c5" "wC" "c6"   "aOE" "c8" "hR"; }
-  #grilla .sT2 {
-    font-size: 23px; }
-  #grilla .c3 {
-    font-size: 18px; }
-  #grilla .c4 {
-    font-size: 18px; }
-  #grilla .c5 {
-    font-size: 18px; }
-  #grilla .c6 {
-    font-size: 18px; }
-  #grilla .c8 {
-    font-size: 18px; }
+    grid-template-areas: "sec1" "sec2";
+    /*seccion 1*/
+    /*seccion 2*/ }
+    #grilla .img-fluid:hover {
+      transform: scale(1.5, 1.5);
+      transition: 1s; }
+    #grilla .sec1 {
+      width: 100%;
+      background-color: #1c1c20;
+      height: 650px;
+      display: grid;
+      grid-template-columns: 45% 45%;
+      grid-template-rows: 120px 370px;
+      row-gap: 50px;
+      column-gap: 50px;
+      justify-content: center;
+      grid-template-areas: "titulo1 titulo1" "wZ rE"; }
+      #grilla .sec1 .titulo1 {
+        grid-area: titulo1; }
+      #grilla .sec1 #wZ {
+        grid-area: wZ;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec1 #rE {
+        min-width: 40px;
+        grid-area: rE;
+        font-size: 12px; }
+      #grilla .sec1 img {
+        width: 200px; }
+    #grilla .sec2 {
+      width: 100%;
+      background-color: #1c1c20;
+      height: 1500px;
+      display: grid;
+      grid-template-columns: 45% 45%;
+      grid-template-rows: 120px 370px 370px 370px;
+      row-gap: 50px;
+      column-gap: 50px;
+      justify-content: center;
+      grid-template-areas: "titulo2 titulo2" "dO sC" "wC aOE" "hR hR";
+      grid-area: sec2; }
+      #grilla .sec2 .titulo2 {
+        grid-area: titulo2; }
+      #grilla .sec2 #dO {
+        grid-area: dO;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 #sC {
+        grid-area: sC;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 #wC {
+        grid-area: wC;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 #aOE {
+        grid-area: aOE;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 #hR {
+        grid-area: hR;
+        min-width: 40px;
+        font-size: 12px; }
+      #grilla .sec2 img {
+        width: 300px; }
   #grillaIndu {
-    grid-template-rows: 1600px 1600px 1600px;
+    grid-template-rows: 1400px 1400px 1400px;
     /*Remeras*/ }
     #grillaIndu .remeras {
       grid-template-columns: 311px;
-      grid-template-rows: 50px 568px 30px 30px 50px 568px 30px 30px;
-      grid-template-areas: "TR" "RH"  "SRH" "IRH" "RM" "SRM" "IRM";
+      grid-template-rows: 568px 568px;
+      grid-template-areas: "RH"  "RM";
       column-gap: 0px;
-      row-gap: 20px; }
+      row-gap: 150px; }
     #grillaIndu .buzos {
       grid-template-columns: 311px;
-      grid-template-rows: 50px 568px 30px 30px 50px 568px 30px 30px;
-      grid-template-areas: "TB" "BH" "SBH" "IBH" "BM" "SBM" "IBM";
+      grid-template-rows: 568px 568px;
+      grid-template-areas: "BH" "BM";
       column-gap: 0px;
-      row-gap: 20px; }
+      row-gap: 150px; }
     #grillaIndu .gorras {
       grid-template-columns: 311px;
-      grid-template-rows: 50px 568px 30px 30px 50px 568px 30px 30px;
-      grid-template-areas: "TG" "GH" "SGH"  "IGH"  "GM" "SGM" "IGM";
+      grid-template-rows: 568px 568px;
+      grid-template-areas: "GH" "GM";
       column-gap: 0px;
-      row-gap: 20px; }
+      row-gap: 150px; }
+  /*Contacto*/
+  /*Seccion Formulario*/
+  #contacto {
+    grid-template-columns: 400px 200px;
+    grid-template-rows: 300px;
+    grid-template-areas: "form sponsors" "form sponsors "; }
   footer {
     padding-top: 10px;
     grid-template-columns: 150px;
@@ -616,83 +679,118 @@ footer {
 @media only screen and (min-width: 992px) {
   .navbar-brand #aM {
     font-size: 17px; }
-  #presentacion video {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    width: 640px;
-    height: 480px; }
-  #acerca .reseña {
-    font-size: 25px;
-    line-height: 1.3; }
-  #grilla .sec1 {
-    margin-top: 400px;
-    row-gap: 80px;
-    height: 900px;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    grid-template-columns: 500px;
-    grid-template-rows: 50px 20px 200px 20px 200px;
-    grid-template-areas: "sT1"  "b3" "wZ" "b5" "rE"; }
-  #grilla .sT1 {
-    font-size: 25px; }
-  #grilla .b3 {
-    font-size: 20px; }
-  #grilla .b5 {
-    font-size: 20px; }
-  #grilla .sec2 {
-    margin-top: 1900px;
-    row-gap: 70px;
-    height: 2000px;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    grid-template-columns: 500px;
-    grid-template-rows: 50px 20px 200px 20px 200px 20px 200px 20px 200px 20px 200px;
-    grid-template-areas: "sT2"  "c3"   "dO" "c4" "sC" "c5" "wC" "c6"   "aOE" "c8" "hR"; }
-  #grilla .sT2 {
-    font-size: 25px; }
-  #grilla .c3 {
-    font-size: 20px; }
-  #grilla .c4 {
-    font-size: 20px; }
-  #grilla .c5 {
-    font-size: 20px; }
-  #grilla .c6 {
-    font-size: 20px; }
-  #grilla .c8 {
-    font-size: 20px; }
-  #grillaIndu {
-    padding-top: 200px;
-    display: grid;
+  #acerca {
+    grid-template-columns: 520px 300px;
+    grid-template-rows: 450px;
+    grid-template-areas: "video resena";
+    background-color: #1c1c20;
+    justify-content: space-evenly;
+    align-items: center; }
+    #acerca iframe {
+      width: 520px;
+      height: 320px; }
+    #acerca .reseña p {
+      text-align: justify;
+      font-size: 19px;
+      line-height: 1.1; }
+  #grilla {
     grid-template-columns: 100%;
-    grid-template-rows: 800px 800px 800px; }
+    grid-template-rows: 300px 1800px;
+    margin-top: 250px;
+    /*seccion 1*/
+    /*seccion 2*/ }
+    #grilla .sec1 {
+      width: 1000px;
+      background-color: #1c1c20;
+      height: 550px;
+      display: grid;
+      grid-template-columns: 350px;
+      grid-template-rows: 120px 200px 200px;
+      grid-template-areas: "titulo1" "wZ" "rE";
+      row-gap: 10px;
+      column-gap: 10px;
+      justify-content: space-evenly; }
+      #grilla .sec1 .titulo1 {
+        color: #bebebe;
+        grid-area: titulo1;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec1 #wZ {
+        min-width: 900px;
+        grid-area: wZ;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec1 #rE {
+        min-width: 900px;
+        grid-area: rE;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec1 img {
+        width: 100%; }
+    #grilla .sec2 {
+      width: 1000px;
+      background-color: #1c1c20;
+      height: 1000px;
+      display: grid;
+      grid-template-columns: 350px;
+      grid-template-rows: 150px 150px 150px 150px 150px 150px;
+      grid-template-areas: "titulo2" "dO" "sC" "wC" "aOE" "hR";
+      row-gap: 10px;
+      column-gap: 30px;
+      justify-content: center;
+      margin-top: 1050px; }
+      #grilla .sec2 #dO {
+        min-width: 720px;
+        grid-area: dO;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec2 #sC {
+        min-width: 720px;
+        grid-area: sC;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec2 #wC {
+        min-width: 720px;
+        grid-area: wC;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec2 #aOE {
+        min-width: 720px;
+        grid-area: aOE;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec2 #hR {
+        min-width: 720px;
+        grid-area: hR;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec2 img {
+        width: 100%; }
+  /*Compras*/
+  /*Grilla Indumentaria*/
+  #grillaIndu {
+    grid-template-columns: 100%;
+    grid-template-rows: 750px 750px 750px;
+    /*Remeras*/
+    /*Buzos*/
+    /*Gorras*/ }
     #grillaIndu .remeras {
-      display: grid;
-      justify-content: center;
-      grid-template-columns: 311px 311px;
-      grid-template-rows: 50px 568px 30px 30px;
-      grid-template-areas: "TR TR" "RH RM" "SRH SRM" "IRH IRM";
-      column-gap: 100px;
-      row-gap: 30px; }
+      grid-template-columns: 300px 300px;
+      grid-template-rows: px;
+      grid-template-areas: "RH RM"; }
     #grillaIndu .buzos {
-      display: grid;
-      justify-content: center;
-      grid-template-columns: 311px 311px;
-      grid-template-rows: 50px 568px 30px 30px;
-      grid-template-areas: "TB TB" "BH BM" "SBH SBM" "IBH IBM";
-      column-gap: 100px;
-      row-gap: 30px; }
+      grid-template-columns: 300px 300px;
+      grid-template-rows: 300px;
+      grid-template-areas: "BH BM"; }
     #grillaIndu .gorras {
-      display: grid;
-      justify-content: center;
-      grid-template-columns: 311px 311px;
-      grid-template-rows: 50px 568px 30px 30px;
-      grid-template-areas: "TG TG" "GH GM" "SGH SGM" "IGH IGM";
-      column-gap: 100px;
-      row-gap: 30px; }
+      grid-template-columns: 300px 300px;
+      grid-template-rows: 300px;
+      grid-template-areas: "GH GM"; }
+  #contacto {
+    grid-template-columns: 500px 350px;
+    grid-template-rows: 300px;
+    grid-template-areas: "form sponsors" "form sponsors "; }
   footer {
-    margin-top: 1200px;
     padding-top: 20px;
     grid-template-columns: 150px;
     grid-template-rows: 90px  30px 30px;
@@ -710,83 +808,119 @@ footer {
 @media only screen and (min-width: 1200px) {
   .navbar-brand #aM {
     font-size: 20px; }
-  #presentacion video {
-    width: 640px;
-    height: 640px; }
-  #acerca .reseña {
-    font-size: 30px;
-    line-height: 1.3; }
-  #grilla .sec1 {
-    height: 450px;
-    width: 1500px;
-    grid-template-columns: 400px 150px 400px;
-    grid-template-rows: 50px 50px 250px;
-    grid-template-areas: "b1 sT1 b2"  "b3 b4 b5" "wZ b6 rE";
-    row-gap: 10px;
-    column-gap: 10px;
-    justify-content: space-evenly; }
-  #grilla .sT1 {
-    font-size: 30px; }
-  #grilla .b3 {
-    font-size: 25px; }
-  #grilla .b5 {
-    font-size: 25px; }
-  #grilla .sec2 {
-    margin-top: 500px;
-    height: 900px;
-    width: 1500px;
-    background-image: linear-gradient(to top, rgba(10, 10, 10, 0.884), rgba(10, 10, 10, 0.884));
-    display: grid;
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 150px 50px 300px 50px 300px;
-    grid-template-areas: "c1 sT2 c2"  "c3 c4 c5" "dO sC wC" "c6 c7 c8" "aOE b9 hR";
-    row-gap: 10px;
-    column-gap: 10px;
-    justify-content: center;
-    align-content: center; }
-  #grilla .sT2 {
-    font-size: 30px; }
-  #grilla .c3 {
-    font-size: 25px; }
-  #grilla .c4 {
-    font-size: 25px; }
-  #grilla .c5 {
-    font-size: 25px; }
-  #grilla .c6 {
-    font-size: 25px; }
-  #grilla .c8 {
-    font-size: 25px; }
+  #acerca {
+    grid-template-columns: 640px 400px;
+    grid-template-rows: 500px;
+    grid-template-areas: "video resena";
+    background-color: #1c1c20;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 50px; }
+    #acerca iframe {
+      width: 640px;
+      height: 480px; }
+    #acerca .reseña p {
+      font-size: 20px;
+      line-height: 1.3; }
+  #grilla {
+    grid-template-columns: 100%;
+    grid-template-rows: 300px 1800px;
+    margin-top: 250px;
+    /*seccion 1*/
+    /*seccion 2*/ }
+    #grilla .sec1 {
+      width: 1000px;
+      background-color: #1c1c20;
+      height: 550px;
+      display: grid;
+      grid-template-columns: 350px;
+      grid-template-rows: 120px 200px 200px;
+      grid-template-areas: "titulo1" "wZ" "rE";
+      row-gap: 10px;
+      column-gap: 10px;
+      justify-content: space-evenly; }
+      #grilla .sec1 .titulo1 {
+        color: #bebebe;
+        grid-area: titulo1;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec1 #wZ {
+        min-width: 900px;
+        grid-area: wZ;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec1 #rE {
+        min-width: 900px;
+        grid-area: rE;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec1 img {
+        width: 100%; }
+    #grilla .sec2 {
+      width: 1000px;
+      background-color: #1c1c20;
+      height: 1000px;
+      display: grid;
+      grid-template-columns: 350px;
+      grid-template-rows: 150px 150px 150px 150px 150px 150px;
+      grid-template-areas: "titulo2" "dO" "sC" "wC" "aOE" "hR";
+      row-gap: 10px;
+      column-gap: 30px;
+      justify-content: center;
+      margin-top: 1050px; }
+      #grilla .sec2 #dO {
+        min-width: 720px;
+        grid-area: dO;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec2 #sC {
+        min-width: 720px;
+        grid-area: sC;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec2 #wC {
+        min-width: 720px;
+        grid-area: wC;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec2 #aOE {
+        min-width: 720px;
+        grid-area: aOE;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec2 #hR {
+        min-width: 720px;
+        grid-area: hR;
+        align-self: center;
+        justify-self: center; }
+      #grilla .sec2 img {
+        width: 100%; }
   #grillaIndu {
-    padding-top: 200px;
-    display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 800px 800px 800px; }
     #grillaIndu .remeras {
-      display: grid;
-      justify-content: center;
       grid-template-columns: 311px 311px;
-      grid-template-rows: 50px 568px 30px 30px;
-      grid-template-areas: "TR TR" "RH RM" "SRH SRM" "IRH IRM";
+      grid-template-rows: 568px;
+      grid-template-areas: "RH RM";
       column-gap: 100px;
       row-gap: 30px; }
     #grillaIndu .buzos {
-      display: grid;
-      justify-content: center;
       grid-template-columns: 311px 311px;
-      grid-template-rows: 50px 568px 30px 30px;
-      grid-template-areas: "TB TB" "BH BM" "SBH SBM" "IBH IBM";
+      grid-template-rows: 568px;
+      grid-template-areas: "BH BM";
       column-gap: 100px;
       row-gap: 30px; }
     #grillaIndu .gorras {
-      display: grid;
-      justify-content: center;
       grid-template-columns: 311px 311px;
-      grid-template-rows: 50px 568px 30px 30px;
-      grid-template-areas: "TG TG" "GH GM" "SGH SGM" "IGH IGM";
+      grid-template-rows: 568px;
+      grid-template-areas: "GH GM";
       column-gap: 100px;
       row-gap: 30px; }
+  #contacto {
+    grid-template-columns: 300px 500px;
+    grid-template-rows: 300px;
+    grid-template-areas: "form form sponsors"; }
   footer {
-    padding-top: 30px;
     grid-template-columns: 150px;
     grid-template-rows: 120px  30px 30px;
     width: 100%;
